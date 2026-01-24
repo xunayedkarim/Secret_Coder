@@ -30,23 +30,21 @@
 		}
 
 
+/* ফুটার গ্যাপ ফিক্স */
+footer .container {
+    width: 100%;
+    max-width: 100% !important; /* ফুল উইথ নিশ্চিত করতে */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem; 
+    padding-right: 2rem;
+}
 
-    /* ফুটার গ্যাপ ফিক্স */
+@media (min-width: 1280px) {
     footer .container {
-        width: 100%;
-        max-width: 1280px; /* max-w-screen-xl */
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 1rem; /* px-4 */
-        padding-right: 1rem; /* px-4 */
+        max-width: 1280px !important; /* বড় স্ক্রিনে কন্টেন্ট মাঝখানে রাখার জন্য */
     }
-    
-    @media (min-width: 1024px) {
-        footer .container {
-            padding-left: 2rem; /* lg:px-8 */
-            padding-right: 2rem; /* lg:px-8 */
-        }
-    }
+}
 	</style>
 	<!-- Bangla font -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
