@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Secret Coder | Python & Machine Learning</title>
+	<title>Secret Coder | মেশিন লার্নিং বুটক্যাম্প</title>
 	<!-- Tailwind -->
 	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 	<!-- Alpine -->
@@ -12,10 +12,25 @@
 	<!-- AOS -->
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<!-- Custom style -->
-	<link rel="stylesheet" href="css/skilline.css" />
-	<!-- Poppins font -->
+	<style>
+		body { font-family: 'Hind Siliguri', sans-serif; }
+		.bg-cream { background-color: #FFFBF0; }
+		.text-darken { color: #2F327D; }
+		.floating {
+			animation: float 6s ease-in-out infinite;
+		}
+		.floating-4 {
+			animation: float 4s ease-in-out infinite;
+		}
+		@keyframes float {
+			0% { transform: translatey(0px); }
+			50% { transform: translatey(-20px); }
+			100% { transform: translatey(0px); }
+		}
+	</style>
+	<!-- Bangla font -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
 </head>
 <body class="antialiased">
 	<!-- navbar -->
@@ -23,7 +38,7 @@
         <div class="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row">
             <div class="flex flex-row items-center justify-between py-6">
                 <div class="relative md:mt-8">
-                    <a href="#" class="text-lg relative z-50 font-bold tracking-widest text-gray-900 rounded-lg focus:outline-none focus:shadow-outline">SECRET CODER</a>
+                    <a href="#" class="text-lg relative z-50 font-bold tracking-widest text-gray-900 rounded-lg focus:outline-none focus:shadow-outline">সিক্রেট কোডার</a>
                     <svg class="h-11 z-40 absolute -top-2 -left-3" viewBox="0 0 79 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M35.2574 2.24264C37.6005 -0.100501 41.3995 -0.100505 43.7426 2.24264L76.7574 35.2574C79.1005 37.6005 79.1005 41.3995 76.7574 43.7426L43.7426 76.7574C41.3995 79.1005 37.6005 79.1005 35.2574 76.7574L2.24264 43.7426C-0.100501 41.3995 -0.100505 37.6005 2.24264 35.2574L35.2574 2.24264Z" fill="#4F46E5"/>
                     </svg>
@@ -36,12 +51,12 @@
                 </button>
             </div>
             <nav :class="{ 'transform md:transform-none': !open, 'h-full': open }" class="h-0 md:h-auto flex flex-col flex-grow md:items-center pb-4 md:pb-0 md:flex md:justify-end md:flex-row origin-top duration-300 scale-y-0">
-                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="#">Home</a>
-                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="#">Curriculum</a>
-                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="#">Success Stories</a>
-                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="#">About Us</a>
-                <a class="px-10 py-3 mt-2 text-sm text-center bg-white text-gray-800 rounded-full md:mt-8 md:ml-4" href="#">Login</a>
-                <a class="px-10 py-3 mt-2 text-sm text-center bg-red-500 text-white rounded-full md:mt-8 md:ml-4" href="https://wa.me/8801893255503">Enroll Now</a>
+                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="#">হোম</a>
+                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="#">কারিকুলাম</a>
+                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="#">সাফল্যের গল্প</a>
+                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="#">আমাদের সম্পর্কে</a>
+                <a class="px-10 py-3 mt-2 text-sm text-center bg-white text-gray-800 rounded-full md:mt-8 md:ml-4" href="#">লগইন</a>
+                <a class="px-10 py-3 mt-2 text-sm text-center bg-red-500 text-white rounded-full md:mt-8 md:ml-4" href="https://wa.me/8801893255503">এখনই ভর্তি হোন</a>
             </nav>
         </div>
     </div>
@@ -50,12 +65,18 @@
 			<!--Left Col-->
 			<div class="flex flex-col w-full lg:w-6/12 justify-center lg:pt-24 items-start text-center lg:text-left mb-5 md:mb-0">
 				<h1 data-aos="fade-right" data-aos-once="true" class="my-4 text-5xl font-bold leading-tight text-darken">
-					<span class="text-indigo-600">Python & Machine Learning</span> A to Z Complete Guide
+					<span class="text-indigo-600">মেশিন লার্নিং বুটক্যাম্প</span> – ব্যাচ ০৪ (চলছে)
 				</h1>
-				<p data-aos="fade-down" data-aos-once="true" data-aos-delay="300" class="leading-normal text-2xl mb-8">Master Python Programming, Data Science, and Machine Learning from Basics to Advanced Projects</p>
+				<p data-aos="fade-down" data-aos-once="true" data-aos-delay="300" class="leading-normal text-2xl mb-8">সীমিত আসন বাকি আছে | ভর্তি চলছে</p>
+				<p data-aos="fade-down" data-aos-once="true" data-aos-delay="500" class="text-lg text-gray-600 mb-8">
+					মেশিন লার্নিং শিখতে চাও কিন্তু...<br>
+					❌ কোথা থেকে শুরু করবে বুঝতে পারছো না?<br>
+					❌ র‍্যান্ডম টিউটোরিয়াল দেখে কনফিউজ হয়ে যাচ্ছো?<br><br>
+					👉 এই ৩-মাসের মেশিন লার্নিং বুটক্যাম্প তোমাকে জিরো থেকে কনফিডেন্ট লেভেলে নিয়ে যাবে।
+				</p>
 				<div data-aos="fade-up" data-aos-once="true" data-aos-delay="700" class="w-full md:flex items-center justify-center lg:justify-start md:space-x-5">
 					<a href="https://wa.me/8801893255503" class="lg:mx-0 bg-indigo-600 text-white text-xl font-bold rounded-full py-4 px-9 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out">
-						Join for free seminar
+						এখনই ভর্তি হোন
 					</a>
 					<div class="flex items-center justify-center space-x-3 mt-5 md:mt-0 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out">
 						<button class="bg-white w-14 h-14 rounded-full flex items-center justify-center">
@@ -63,39 +84,39 @@
 								<path d="M22.5751 12.8097C23.2212 13.1983 23.2212 14.135 22.5751 14.5236L1.51538 27.1891C0.848878 27.5899 5.91205e-07 27.1099 6.25202e-07 26.3321L1.73245e-06 1.00123C1.76645e-06 0.223477 0.848877 -0.256572 1.51538 0.14427L22.5751 12.8097Z" fill="#4F46E5"/>
 							</svg>
 						</button>
-						<span class="cursor-pointer">Watch free demo class</span>
+						<span class="cursor-pointer">ফ্রি ক্লাস দেখুন</span>
 					</div>
 				</div>
 			</div>
 			<!--Right Col-->
 			<div class="w-full lg:w-6/12 lg:-mt-10 relative" id="girl">
 				<img data-aos="fade-up" data-aos-once="true" class="w-10/12 mx-auto 2xl:-mb-20" src="img/girl.png" />
-				<!-- certificate -->
+				<!-- সার্টিফিকেট -->
 				<div data-aos="fade-up" data-aos-delay="300" data-aos-once="true" class="absolute top-20 -left-6 sm:top-32 sm:left-10 md:top-40 md:left-16 lg:-left-0 lg:top-52 floating-4">
 					<div class="bg-white bg-opacity-80 rounded-lg p-3 h-16 sm:h-20 flex items-center">
 						<i class="fas fa-certificate text-indigo-600 text-xl mr-2"></i>
-						<span class="font-bold text-sm">Industry<br>Certificate</span>
+						<span class="font-bold text-sm">অফিসিয়াল<br>সার্টিফিকেট</span>
 					</div>
 				</div>
-				<!-- machine learning -->
+				<!-- লাইভ ক্লাস -->
 				<div data-aos="fade-up" data-aos-delay="400" data-aos-once="true" class="absolute top-20 right-10 sm:right-24 sm:top-28 md:top-36 md:right-32 lg:top-32 lg:right-16 floating">
 					<div class="h-20 sm:h-28 bg-white bg-opacity-80 rounded-lg p-3">
-						<i class="fas fa-brain text-indigo-600 text-2xl mb-1"></i>
-						<p class="font-bold text-sm">Machine<br>Learning</p>
+						<i class="fas fa-video text-indigo-600 text-2xl mb-1"></i>
+						<p class="font-bold text-sm">১২টি<br>লাইভ ক্লাস</p>
 					</div>
 				</div>
-				<!-- python -->
+				<!-- প্রজেক্ট -->
 				<div data-aos="fade-up" data-aos-delay="500" data-aos-once="true" class="absolute bottom-14 -left-4 sm:left-2 sm:bottom-20 lg:bottom-24 lg:-left-4 floating">
 					<div class="h-20 sm:h-28 bg-white bg-opacity-80 rounded-lg p-3">
-						<i class="fab fa-python text-indigo-600 text-2xl mb-1"></i>
-						<p class="font-bold text-sm">Python<br>Programming</p>
+						<i class="fas fa-project-diagram text-indigo-600 text-2xl mb-1"></i>
+						<p class="font-bold text-sm">রিয়েল ওয়ার্ল্ড<br>প্রজেক্ট</p>
 					</div>
 				</div>
-				<!-- job placement -->
+				<!-- জব সাপোর্ট -->
 				<div data-aos="fade-up" data-aos-delay="600" data-aos-once="true" class="absolute bottom-20 md:bottom-48 lg:bottom-52 -right-6 lg:right-8 floating-4">
 					<div class="bg-white bg-opacity-80 rounded-lg p-3 h-16 sm:h-20 flex items-center">
 						<i class="fas fa-briefcase text-green-600 text-xl mr-2"></i>
-						<span class="font-bold text-sm">Job<br>Placement</span>
+						<span class="font-bold text-sm">ক্যারিয়ার<br>সাপোর্ট</span>
 					</div>
 				</div>
 			</div>
@@ -111,9 +132,9 @@
 	<!-- container -->
 	<div class="container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700 overflow-x-hidden">
 
-		<!-- trusted by -->
+		<!-- প্রযুক্তি সমূহ -->
 		<div class="max-w-4xl mx-auto">
-			<h1 class="text-center mb-3 text-gray-400 font-medium">Technologies You'll Master</h1>
+			<h1 class="text-center mb-3 text-gray-400 font-medium">যেসব প্রযুক্তি শিখবেন</h1>
 			<div class="grid grid-cols-3 lg:grid-cols-6 gap-4 justify-items-center">
 				<img class="h-7" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
 				<img class="h-7" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg">
@@ -124,58 +145,121 @@
 			</div>
 		</div>
 
-		<!-- All-In-One Cloud Software. -->
+		<!-- কোর্স ফিচার -->
 		<div data-aos="flip-up" class="max-w-xl mx-auto text-center mt-24">
-			<h1 class="font-bold text-darken my-3 text-2xl">Complete <span class="text-indigo-600">Learning Path.</span></h1>
-			<p class="leading-relaxed text-gray-500">From Python basics to advanced Machine Learning projects - everything you need to become job-ready.</p>
+			<h1 class="font-bold text-darken my-3 text-2xl">আপনি যা পাবেন</h1>
+			<p class="leading-relaxed text-gray-500">পুরো কোর্সে যা যা অন্তর্ভুক্ত আছে</p>
 		</div>
-		<!-- card -->
+		<!-- কার্ড -->
 		<div class="grid md:grid-cols-3 gap-14 md:gap-5 mt-20">
 			<div data-aos="fade-up" class="bg-white shadow-xl p-6 text-center rounded-xl">
 				<div style="background: #4F46E5;" class="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
-					<i class="fas fa-code text-white text-2xl"></i>
+					<i class="fas fa-certificate text-white text-2xl"></i>
 				</div>
-				<h1 class="font-medium text-xl mb-3 lg:px-14 text-darken">Python Programming</h1>
-				<p class="px-4 text-gray-500">Master Python from basics to advanced. Learn data structures, OOP, file handling, and build real-world applications.</p>
+				<h1 class="font-medium text-xl mb-3 lg:px-14 text-darken">অফিসিয়াল সার্টিফিকেট</h1>
+				<p class="px-4 text-gray-500">কোর্স সম্পন্ন করলে পাবেন ইন্ডাস্ট্রি রিকগনাইজড সার্টিফিকেট</p>
 			</div>
 			<div data-aos="fade-up" data-aos-delay="150" class="bg-white shadow-xl p-6 text-center rounded-xl">
 				<div style="background: #F48C06;" class="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
-					<i class="fas fa-chart-line text-white text-2xl"></i>
+					<i class="fas fa-video text-white text-2xl"></i>
 				</div>
-				<h1 class="font-medium text-xl mb-3 lg:px-14 text-darken">Data Science</h1>
-				<p class="px-4 text-gray-500">Learn data analysis, visualization with Pandas, NumPy, Matplotlib. Work with real datasets and create insights.</p>
+				<h1 class="font-medium text-xl mb-3 lg:px-14 text-darken">১২টি লাইভ ক্লাস</h1>
+				<p class="px-4 text-gray-500">প্রতি শুক্রবার ৮টা-১০টা পর্যন্ত লাইভ ইন্টার‍্যাকটিভ ক্লাস</p>
 			</div>
 			<div data-aos="fade-up" data-aos-delay="300" class="bg-white shadow-xl p-6 text-center rounded-xl">
 				<div style="background: #10B981;" class="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
-					<i class="fas fa-robot text-white text-2xl"></i>
+					<i class="fas fa-project-diagram text-white text-2xl"></i>
 				</div>
-				<h1 class="font-medium text-xl mb-3 lg:px-14 text-darken lg:h-14 pt-3">Machine Learning</h1>
-				<p class="px-4 text-gray-500">Build ML models, understand algorithms, create AI projects. From regression to deep learning applications.</p>
+				<h1 class="font-medium text-xl mb-3 lg:px-14 text-darken lg:h-14 pt-3">রিয়েল ওয়ার্ল্ড প্রজেক্ট</h1>
+				<p class="px-4 text-gray-500">প্র্যাকটিক্যাল প্রজেক্ট যা রিয়েল জবে কাজে লাগবে</p>
 			</div>
 		</div>
 
-		<!-- lorem -->
+		<!-- অতিরিক্ত ফিচার -->
+		<div class="grid md:grid-cols-3 gap-14 md:gap-5 mt-14">
+			<div data-aos="fade-up" class="bg-white shadow-xl p-6 text-center rounded-xl">
+				<div style="background: #8B5CF6;" class="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
+					<i class="fas fa-graduation-cap text-white text-2xl"></i>
+				</div>
+				<h1 class="font-medium text-xl mb-3 lg:px-14 text-darken">থিসিস ও রিসার্চ সাপোর্ট</h1>
+				<p class="px-4 text-gray-500">ইউনিভার্সিটি থিসিস এবং রিসার্চ প্রজেক্টে গাইডলাইন</p>
+			</div>
+			<div data-aos="fade-up" data-aos-delay="150" class="bg-white shadow-xl p-6 text-center rounded-xl">
+				<div style="background: #EC4899;" class="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
+					<i class="fas fa-road text-white text-2xl"></i>
+				</div>
+				<h1 class="font-medium text-xl mb-3 lg:px-14 text-darken">১ বছরের ক্যারিয়ার রোডম্যাপ</h1>
+				<p class="px-4 text-gray-500">কিভাবে এডভান্সড লেভেলে যাবেন তার স্টেপ বাই স্টেপ গাইড</p>
+			</div>
+			<div data-aos="fade-up" data-aos-delay="300" class="bg-white shadow-xl p-6 text-center rounded-xl">
+				<div style="background: #3B82F6;" class="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
+					<i class="fas fa-user-graduate text-white text-2xl"></i>
+				</div>
+				<h1 class="font-medium text-xl mb-3 lg:px-14 text-darken lg:h-14 pt-3">পার্সোনাল মেন্টরশিপ</h1>
+				<p class="px-4 text-gray-500">একজন অভিজ্ঞ মেন্টরের সরাসরি গাইডলাইন এবং ফিডব্যাক</p>
+			</div>
+		</div>
+
+		<!-- কোর্স ডিটেইলস -->
 		<div class="mt-28">
 			<div data-aos="flip-down" class="text-center max-w-screen-md mx-auto">
-				<h1 class="text-3xl font-bold mb-4">Why Choose <span class="text-indigo-600">Secret Coder?</span></h1>
-				<p class="text-gray-500">We provide practical, project-based learning with industry experts. Our curriculum is designed for Bangladesh's job market with real-world applications.</p>
+				<h1 class="text-3xl font-bold mb-4">ক্লাসের বিস্তারিত তথ্য</h1>
+				<p class="text-gray-500">কোর্স সম্পর্কে সম্পূর্ণ তথ্য জানুন এবং আপনার প্রশ্নের উত্তর পান</p>
 			</div>
 			<div data-aos="fade-up" class="flex flex-col md:flex-row justify-center space-y-5 md:space-y-0 md:space-x-6 lg:space-x-10 mt-7">
 				<div class="relative md:w-5/12">
-					<img class="rounded-2xl" src="img/Rectangle 19.png" alt="">
-					<div class="absolute bg-black bg-opacity-20 bottom-0 left-0 right-0 w-full h-full rounded-2xl">
-						<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-							<h1 class="uppercase text-white font-bold text-center text-sm lg:text-xl mb-3">FOR STUDENTS</h1>
-							<a href="https://wa.me/8801893255503" class="rounded-full text-white border text-xs lg:text-md px-6 py-3 w-full font-medium focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out block text-center">Start Learning Today</a>
+					<div class="bg-gradient-to-r from-indigo-500 to-purple-600 p-8 rounded-2xl text-white h-full">
+						<h2 class="text-xl font-bold mb-4">ক্লাসের সময়সূচী</h2>
+						<div class="space-y-4">
+							<div class="flex items-center">
+								<i class="fas fa-calendar-alt mr-3"></i>
+								<div>
+									<p class="font-bold">ক্লাস শুরু: ১লা ফেব্রুয়ারি</p>
+									<p class="text-sm">প্রতি শুক্রবার</p>
+								</div>
+							</div>
+							<div class="flex items-center">
+								<i class="fas fa-clock mr-3"></i>
+								<div>
+									<p class="font-bold">সময়: ৮:০০ PM – ১০:০০ PM</p>
+									<p class="text-sm">(২ ঘণ্টা)</p>
+								</div>
+							</div>
+							<div class="flex items-center">
+								<i class="fas fa-hourglass-half mr-3"></i>
+								<div>
+									<p class="font-bold">মেয়াদ: ৩ মাস</p>
+									<p class="text-sm">(১২টি সপ্তাহ)</p>
+								</div>
+							</div>
+							<div class="flex items-center">
+								<i class="fas fa-users mr-3"></i>
+								<div>
+									<p class="font-bold">ব্যাচ: ০৪ (চলছে)</p>
+									<p class="text-sm">সীমিত আসন</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="relative md:w-5/12">
-					<img class="rounded-2xl" src="img/Rectangle 21.png" alt="">
-					<div class="absolute bg-black bg-opacity-20 bottom-0 left-0 right-0 w-full h-full rounded-2xl">
-						<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-							<h1 class="uppercase text-white font-bold text-center text-sm lg:text-xl mb-3">FREE SEMINAR</h1>
-							<button class="rounded-full text-white text-xs lg:text-md px-6 py-3 w-full font-medium focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out" style="background: rgba(79, 70, 229, 0.9)">Register for Free Class</button>
+					<div class="bg-gradient-to-r from-green-500 to-emerald-600 p-8 rounded-2xl text-white h-full">
+						<h2 class="text-xl font-bold mb-4">কোর্স ফি ও ভর্তি</h2>
+						<div class="space-y-4">
+							<div class="text-center">
+								<p class="text-sm">কোর্স ফি (৩ মাসের জন্য)</p>
+								<div class="text-3xl font-bold my-2">৳ ৩,০০০</div>
+								<p class="text-sm bg-white bg-opacity-20 p-2 rounded">এককালীন পেমেন্ট</p>
+							</div>
+							<div class="mt-4">
+								<p class="text-sm mb-2">যেভাবে ভর্তি হবেন:</p>
+								<ol class="text-sm list-decimal list-inside space-y-1">
+									<li>WhatsApp করুন: 01893-255503</li>
+									<li>কোর্স সম্পর্কে বিস্তারিত জানুন</li>
+									<li>পেমেন্ট সম্পন্ন করুন</li>
+									<li>ক্লাসে যোগ দিন</li>
+								</ol>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -185,18 +269,43 @@
 		<div class="sm:flex items-center sm:space-x-8 mt-36">
 			<div data-aos="fade-right" class="sm:w-1/2 relative">
 				<div class="bg-indigo-600 rounded-full absolute w-12 h-12 z-0 -left-4 -top-3 animate-pulse"></div>
-				<h1 class="font-semibold text-2xl relative z-50 text-darken lg:pr-10">Everything you need to become a <span class="text-indigo-600">Machine Learning Engineer</span></h1>
-				<p class="py-5 lg:pr-32">Our comprehensive curriculum covers Python programming, data science libraries, ML algorithms, and real-world projects that companies actually need.</p>
-				<a href="" class="underline">View Full Curriculum</a>
+				<h1 class="font-semibold text-2xl relative z-50 text-darken lg:pr-10">মেন্টর পরিচিতি</h1>
+				<div class="py-5 lg:pr-32">
+					<h3 class="text-xl font-bold text-indigo-600 mb-3">জুনায়েদ করিম</h3>
+					<p class="text-gray-600 mb-4">রিসার্চ-ফোকাসড ও ক্যারিয়ার-ওরিয়েন্টেড গাইডেন্স প্রদান</p>
+					<p class="text-gray-600 mb-3">🔹 ৫+ বছর মেশিন লার্নিং এক্সপেরিয়েন্স</p>
+					<p class="text-gray-600 mb-3">🔹 মাল্টিপল ইন্ডাস্ট্রি প্রজেক্ট এক্সপেরিয়েন্স</p>
+					<p class="text-gray-600 mb-3">🔹 ২০০+ শিক্ষার্থীকে গাইড করেছেন</p>
+					<p class="text-gray-600">🔹 থিসিস ও রিসার্চ সাপোর্ট বিশেষজ্ঞ</p>
+				</div>
 			</div>
 			<div data-aos="fade-left" class="sm:w-1/2 relative mt-10 sm:mt-0">
 				<div style="background: #4F46E5;" class="floating w-24 h-24 absolute rounded-lg z-0 -top-3 -left-3"></div>
-				<img class="rounded-xl z-40 relative" src="img/teacher-explaining.png" alt="">
-				<button class="bg-white w-14 h-14 rounded-full flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out z-50">
-					<svg class="w-5 h-5 ml-1" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M22.5751 12.8097C23.2212 13.1983 23.2212 14.135 22.5751 14.5236L1.51538 27.1891C0.848878 27.5899 5.91205e-07 27.1099 6.25202e-07 26.3321L1.73245e-06 1.00123C1.76645e-06 0.223477 0.848877 -0.256572 1.51538 0.14427L22.5751 12.8097Z" fill="#4F46E5"/>
-					</svg>
-				</button>
+				<div class="bg-white rounded-xl z-40 relative p-8 shadow-lg">
+					<h3 class="text-xl font-bold mb-4 text-darken">কেন এই কোর্সে ভর্তি হবেন?</h3>
+					<ul class="space-y-3">
+						<li class="flex items-start">
+							<i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+							<span>জিরো থেকে শুরু, প্রোগ্রামিং জানার দরকার নেই</span>
+						</li>
+						<li class="flex items-start">
+							<i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+							<span>প্র্যাকটিক্যাল প্রজেক্ট ভিত্তিক শেখার পদ্ধতি</span>
+						</li>
+						<li class="flex items-start">
+							<i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+							<span>সীমিত শিক্ষার্থী, তাই প্রত্যেককে সময় দেওয়া যায়</span>
+						</li>
+						<li class="flex items-start">
+							<i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+							<span>জব প্লেসমেন্ট এবং ইন্টার্নশিপ সুযোগ</span>
+						</li>
+						<li class="flex items-start">
+							<i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+							<span>লাইফটাইম কমিউনিটি অ্যাক্সেস</span>
+						</li>
+					</ul>
+				</div>
 				<div class="bg-indigo-600 w-40 h-40 floating absolute rounded-lg z-10 -bottom-3 -right-3"></div>
 			</div>
 		</div>
@@ -210,71 +319,92 @@
 				<div style="background: #F56666;" class="w-5 h-5 rounded-full absolute z-0 right-52 bottom-1 animate-ping"></div>
 			</div>
 			<div data-aos="fade-down" class="md:w-5/12 mt-20 md:mt-0 text-gray-500">
-				<h1 class="text-2xl font-semibold text-darken lg:pr-40">Live Interactive <span class="text-indigo-600">Learning Sessions</span></h1>
+				<h1 class="text-2xl font-semibold text-darken lg:pr-40">লাইভ ইন্টার‍্যাকটিভ <span class="text-indigo-600">ক্লাসের সুবিধা</span></h1>
 				<div class="flex items-center space-x-5 my-5">
 					<div class="flex-shrink bg-white shadow-lg rounded-full p-3 flex items-center justify-center">
-						<i class="fas fa-video text-indigo-600"></i>
+						<i class="fas fa-question-circle text-indigo-600"></i>
 					</div>
-					<p>Live online classes with industry expert instructors</p>
+					<p>ক্লাসের মধ্যেই প্রশ্ন করতে পারবেন এবং উত্তর পাবেন</p>
 				</div>
 				<div class="flex items-center space-x-5 my-5">
 					<div class="flex-shrink bg-white shadow-lg rounded-full p-3 flex items-center justify-center">
-						<i class="fas fa-project-diagram text-indigo-600"></i>
+						<i class="fas fa-download text-indigo-600"></i>
 					</div>
-					<p>5+ real-world projects for hands-on experience</p>
+					<p>ক্লাস রেকর্ডিং লাইফটাইম অ্যাক্সেস পাবেন</p>
 				</div>
 				<div class="flex items-center space-x-5 my-5">
 					<div class="flex-shrink bg-white shadow-lg rounded-full p-3 flex items-center justify-center">
-						<i class="fas fa-headset text-indigo-600"></i>
+						<i class="fas fa-comments text-indigo-600"></i>
 					</div>
-					<p>24/7 doubt support and community access</p>
+					<p>২৪/৭ WhatsApp গ্রুপে সাপোর্ট পাবেন</p>
 				</div>
 			</div>
 		</div>
 
-		<!-- Tools For Teachers And Learners -->
+		<!-- টার্গেট অডিয়েন্স -->
 		<div class="flex flex-col md:flex-row items-center md:space-x-10 mt-16">
 			<div data-aos="fade-right" class="md:w-1/2 lg:pl-14">
-				<h1 class="text-darken font-semibold text-3xl lg:pr-56"><span class="text-indigo-600">Course</span> Features & Benefits</h1>
-				<p class="text-gray-500 my-4 lg:pr-32">Get lifetime access to course materials, project files, and community support. Learn at your own pace with flexible scheduling.</p>
+				<h1 class="text-darken font-semibold text-3xl lg:pr-56">কে এই কোর্সটি <span class="text-indigo-600">করবেন?</span></h1>
+				<p class="text-gray-500 my-4 lg:pr-32">যারা মেশিন লার্নিং শিখতে চান কিন্তু সঠিক গাইডলাইন পান না, তাদের জন্য এই কোর্স।</p>
+				<ul class="space-y-3">
+					<li class="flex items-center"><i class="fas fa-graduation-cap text-indigo-600 mr-3"></i> ফ্রেশ গ্র্যাজুয়েট/আন্ডারগ্র্যাজুয়েট স্টুডেন্ট</li>
+					<li class="flex items-center"><i class="fas fa-briefcase text-indigo-600 mr-3"></i> প্রফেশনাল যারা ক্যারিয়ার চেঞ্জ করতে চান</li>
+					<li class="flex items-center"><i class="fas fa-user-tie text-indigo-600 mr-3"></i> রিসার্চার যারা থিসিসে ML ব্যবহার করবেন</li>
+					<li class="flex items-center"><i class="fas fa-lightbulb text-indigo-600 mr-3"></i> এন্ট্রেপ্রেনিউর যারা AI প্রোডাক্ট বানাতে চান</li>
+				</ul>
 			</div>
 			<img data-aos="fade-left" class="md:w-1/2" src="img/girl-with-books.png">
 		</div>
 
-		<!-- Assessments, Quizzes, Tests -->
+		<!-- প্রজেক্ট -->
 		<div class="mt-20 flex flex-col-reverse md:flex-row items-center md:space-x-10">
 			<div data-aos="fade-right" class="md:w-6/12">
 				<img class="md:w-11/12" src="img/true-false.png">
 			</div>
 			<div data-aos="fade-left" class="md:w-6/12 md:transform md:-translate-y-20">
-				<h1 class="font-semibold text-darken text-3xl lg:pr-64">Real World <span class="text-indigo-600">Projects</span></h1>
-				<p class="text-gray-500 my-5 lg:pr-52">Build portfolio with 5+ industry projects including Bangladesh GDP Prediction, Heart Disease Analysis, and E-commerce Recommendation Systems.</p>
+				<h1 class="font-semibold text-darken text-3xl lg:pr-64">রিয়েল ওয়ার্ল্ড <span class="text-indigo-600">প্রজেক্ট</span></h1>
+				<p class="text-gray-500 my-5 lg:pr-52">কোর্সে থাকছে ৫টি বাস্তবিক প্রজেক্ট যা আপনার পোর্টফোলিওকে শক্তিশালী করবে:</p>
+				<ol class="list-decimal list-inside space-y-2 text-gray-600">
+					<li>বাংলাদেশের GDP প্রেডিকশন মডেল</li>
+					<li>হার্ট ডিজিস প্রেডিকশন সিস্টেম</li>
+					<li>বাংলা টেক্সট সেন্টিমেন্ট এনালাইসিস</li>
+					<li>ই-কমার্স প্রোডাক্ট রিকমেন্ডেশন সিস্টেম</li>
+					<li>ইমেজ ক্লাসিফিকেশন প্রজেক্ট</li>
+				</ol>
 			</div>
 		</div>
 
-		<!-- Class Management Tools for Educators -->
+		<!-- ক্যারিয়ার সাপোর্ট -->
 		<div class="flex flex-col md:flex-row items-center mt-12">
 			<div data-aos="fade-right" class="md:w-5/12">
-				<h1 class="text-darken font-semibold text-3xl leading-tight lg:pr-32"><span class="text-indigo-600">Career Support</span> & Placement</h1>
-				<p class="my-5 lg:pr-14">Resume building, interview preparation, and job placement assistance. Connect with our hiring partner companies in Bangladesh.</p>
+				<h1 class="text-darken font-semibold text-3xl leading-tight lg:pr-32"><span class="text-indigo-600">ক্যারিয়ার সাপোর্ট</span> ও প্লেসমেন্ট</h1>
+				<p class="my-5 lg:pr-14">কোর্স শেষে পাবেন ক্যারিয়ার গাইডেন্স, রিজুমি তৈরি সহায়তা, ইন্টারভিউ প্রিপারেশন এবং আমাদের পার্টনার কোম্পানিগুলোতে জব রেফারেল।</p>
 			</div>
 			<img data-aos="fade-left" class="md:w-7/12" src="img/gradebook.png">
 		</div>
 
-		<!-- One-on-One Discussions -->
+		<!-- যোগাযোগ -->
 		<div class="mt-24 flex flex-col-reverse md:flex-row items-center md:space-x-10">
 			<div data-aos="fade-right" class="md:w-7/12">
 				<img class="md:w-11/12" src="img/discussion.png">
 			</div>
 			<div data-aos="fade-left" class="md:w-5/12 md:transform md:-translate-y-6">
-				<h1 class="font-semibold text-darken text-3xl lg:pr-64">Industry <span class="text-indigo-600">Certificate</span></h1>
-				<p class="text-gray-500 my-5 lg:pr-24">Get industry-recognized certificate verified with QR code. Valid for LinkedIn and job applications.</p>
+				<h1 class="font-semibold text-darken text-3xl lg:pr-64">ভর্তি ও <span class="text-indigo-600">যোগাযোগ</span></h1>
+				<p class="text-gray-500 my-5 lg:pr-24">যেকোনো প্রশ্ন থাকলে বা ভর্তি হতে চাইলে সরাসরি WhatsApp এ মেসেজ দিন:</p>
+				<div class="bg-indigo-50 p-6 rounded-xl">
+					<h3 class="font-bold text-indigo-800 mb-3">WhatsApp: 01893-255503</h3>
+					<p class="text-sm text-gray-600 mb-4">সকাল ১০টা থেকে রাত ১০টা পর্যন্ত খোলা</p>
+					<a href="https://wa.me/8801893255503" class="bg-green-500 text-white font-bold py-3 px-6 rounded-full hover:bg-green-600 transition inline-flex items-center">
+						<i class="fab fa-whatsapp mr-2"></i> WhatsApp এ মেসেজ দিন
+					</a>
+				</div>
+				<p class="text-sm text-red-500 mt-4">⚠️ সীমিত আসন নীতি মানা হচ্ছে কোয়ালিটি মেন্টরশিপের জন্য।<br>👉 আগ্রহী হলে এখনই মেসেজ দিন—আসন শেষ হওয়ার আগে।</p>
 			</div>
 		</div>
 
-		<a href="https://wa.me/8801893255503" data-aos="flip-up" class="px-5 py-3 bg-indigo-600 text-white font-medium my-14 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out rounded-full mx-auto block text-center w-48">Enroll Now</a>
+		<a href="https://wa.me/8801893255503" data-aos="flip-up" class="px-5 py-3 bg-indigo-600 text-white font-medium my-14 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out rounded-full mx-auto block text-center w-48">এখনই ভর্তি হোন</a>
 
-		<!-- INTEGRATIONS -->
+		<!-- ফ্রিকোয়েন্টলি আস্কড -->
 		<div class="mt-24 flex flex-col md:flex-row items-start md:space-x-10">
 			<div data-aos="zoom-in-right" class="md:w-6/12">
 				<img class="md:w-8/12 mx-auto" src="img/integrations.png">
@@ -282,27 +412,38 @@
 			<div data-aos="zoom-in-left" class="md:w-6/12">
 				<div class="flex items-center space-x-20 mb-5">
 					<span class="border border-gray-300 w-14 absolute"></span>
-					<h1 class="text-gray-400 tracking-widest text-sm">INDUSTRY DEMAND</h1>
+					<h1 class="text-gray-400 tracking-widest text-sm">সচরাচর জিজ্ঞাসা</h1>
 				</div>
-				<h1 class="font-semibold text-darken text-2xl lg:pr-40">High Demand in Bangladesh <span class="text-indigo-600">Job Market</span></h1>
-				<p class="text-gray-500 my-5 lg:pr-20">Machine Learning and Python developers are in high demand in Bangladesh with 500+ active job openings and 35% annual growth rate.</p>
-				<button class="px-5 py-3 border border-indigo-600 text-indigo-600 font-medium my-4 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out rounded-full">View Job Market Report</button>
+				<h1 class="font-semibold text-darken text-2xl lg:pr-40">কিছু সাধারণ <span class="text-indigo-600">প্রশ্ন ও উত্তর</span></h1>
+				<div class="space-y-4 mt-6">
+					<div class="border-l-4 border-indigo-500 pl-4">
+						<h3 class="font-bold text-gray-800">প্রোগ্রামিং একদম নতুন কি কোর্স করতে পারবো?</h3>
+						<p class="text-gray-600 text-sm mt-1">হ্যাঁ, এই কোর্সটি জিরো থেকে শেখানো হবে। Python শেখানো হবে প্রথমে, তারপর মেশিন লার্নিং।</p>
+					</div>
+					<div class="border-l-4 border-indigo-500 pl-4">
+						<h3 class="font-bold text-gray-800">ক্লাস মিস করলে কী হবে?</h3>
+						<p class="text-gray-600 text-sm mt-1">সকল ক্লাস রেকর্ড করা হবে এবং লাইফটাইম অ্যাক্সেস পাবেন।</p>
+					</div>
+					<div class="border-l-4 border-indigo-500 pl-4">
+						<h3 class="font-bold text-gray-800">সার্টিফিকেট কি ইন্ডাস্ট্রিতে স্বীকৃত?</h3>
+						<p class="text-gray-600 text-sm mt-1">হ্যাঁ, আমাদের সার্টিফিকেট ইন্ডাস্ট্রি রিকগনাইজড এবং লিঙ্কডইন, আপওয়ার্ক, ফাইভারে যাচাইযোগ্য।</p>
+					</div>
+				</div>
 			</div>
 		</div>
 
-		<!-- TESTIMONIAL -->
+		<!-- সাফল্যের গল্প -->
 		<div class="mt-24 flex flex-col-reverse md:flex-row items-start md:space-x-10">
 			<div data-aos="zoom-in-right" class="md:w-5/12">
 				<div class="flex items-center space-x-20 mb-5">
 					<span class="border border-gray-300 w-14 absolute"></span>
-					<h1 class="text-gray-400 tracking-widest text-sm">SUCCESS STORIES</h1>
+					<h1 class="text-gray-400 tracking-widest text-sm">সাফল্যের গল্প</h1>
 				</div>
-				<h1 class="font-semibold text-darken text-2xl lg:pr-40">What Our Students Say?</h1>
-				<p class="text-gray-500 my-5 lg:pr-36">Secret Coder has helped 1000+ students launch their careers in tech.</p>
-				<p class="text-gray-500 my-5 lg:pr-36">Our alumni are now working at top companies in Bangladesh.</p>
-				<p class="text-gray-500 my-5 lg:pr-36">Join our community of successful learners.</p>
+				<h1 class="font-semibold text-darken text-2xl lg:pr-40">আমাদের শিক্ষার্থীরা <span class="text-indigo-600">কি বলে?</span></h1>
+				<p class="text-gray-500 my-5 lg:pr-36">আমাদের শিক্ষার্থীরা এখন কাজ করছে বিভিন্ন নামীদামী কোম্পানিতে।</p>
+				<p class="text-gray-500 my-5 lg:pr-36">তাদের সাফল্য গল্প থেকে অনুপ্রাণিত হোন।</p>
 				<a href="https://wa.me/8801893255503" class="flex items-center space-x-3 pl-3 border-b border-l border-t border-indigo-600 text-indigo-600 font-medium my-4 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out rounded-full">
-					<span>Talk to Alumni</span>
+					<span>আলোচনা করুন</span>
 					<div class="border border-indigo-600 h-14 w-14 rounded-full flex items-center justify-center">
 						<svg class="w-5 h-5" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M25.7071 8.70711C26.0976 8.31658 26.0976 7.68342 25.7071 7.2929L19.3431 0.928934C18.9526 0.538409 18.3195 0.538409 17.9289 0.928934C17.5384 1.31946 17.5384 1.95262 17.9289 2.34315L23.5858 8L17.9289 13.6569C17.5384 14.0474 17.5384 14.6805 17.9289 15.0711C18.3195 15.4616 18.9526 15.4616 19.3431 15.0711L25.7071 8.70711ZM-8.74228e-08 9L25 9L25 7L8.74228e-08 7L-8.74228e-08 9Z" fill="#4F46E5"/>
@@ -315,30 +456,34 @@
 			</div>
 		</div>
 
-		<!-- Latest News and Resources -->
+		<!-- কোর্স সারাংশ -->
 		<div data-aos="zoom-in" class="mt-16 text-center">
-			<h1 class="text-darken text-2xl font-semibold">Course Details & Pricing</h1>
-			<p class="text-gray-500 my-5">Everything you need to know about our Python & Machine Learning course</p>
+			<h1 class="text-darken text-2xl font-semibold">কোর্স সারাংশ</h1>
+			<p class="text-gray-500 my-5">৩ মাসে যা শিখবেন তার সম্পূর্ণ বিবরণ</p>
 		</div>
 		<div data-aos="zoom-in-up" class="my-14 flex flex-col lg:flex-row lg:space-x-20">
 			<div class="lg:w-6/12">
 				<div class="w-full mb-6 bg-gradient-to-r from-indigo-500 to-purple-600 p-8 rounded-2xl text-white">
-					<h2 class="text-2xl font-bold mb-4">Complete Course Package</h2>
-					<div class="flex items-baseline mb-4">
-						<span class="text-4xl font-bold">৳ 3,000</span>
-						<span class="ml-3 text-gray-200 line-through">৳ 5,000</span>
-						<span class="ml-3 bg-green-500 px-3 py-1 rounded-full text-sm">40% OFF</span>
+					<h2 class="text-2xl font-bold mb-6">কমপ্লিট কোর্স প্যাকেজ</h2>
+					<div class="flex items-baseline mb-6">
+						<span class="text-4xl font-bold">৳ ৩,০০০</span>
+						<span class="ml-3 text-gray-200 text-lg">এককালীন পেমেন্ট</span>
 					</div>
-					<p class="mb-6">One-time payment for complete access</p>
-					<a href="https://wa.me/8801893255503" class="bg-white text-indigo-600 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition">Enroll Now</a>
+					<div class="bg-white bg-opacity-20 p-4 rounded-lg mb-6">
+						<p class="font-bold">🎯 আসন প্রায় শেষ!</p>
+						<p class="text-sm">সীমিত আসন নীতি মেনে চলছি</p>
+					</div>
+					<a href="https://wa.me/8801893255503" class="bg-white text-indigo-600 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition inline-block">এখনই বুক করুন</a>
 				</div>
 				<div class="bg-white p-6 rounded-2xl shadow-lg">
-					<h3 class="font-bold text-lg mb-4">What's Included:</h3>
+					<h3 class="font-bold text-lg mb-4 text-darken">যা যা পাবেন:</h3>
 					<ul class="space-y-3">
-						<li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Live Online Classes (12 Sessions)</li>
-						<li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> 5 Real-World Projects</li>
-						<li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Lifetime Video Access</li>
-						<li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Certificate & Job Support</li>
+						<li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> ১২টি লাইভ ক্লাস (প্রতি শুক্রবার)</li>
+						<li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> ৫টি রিয়েল ওয়ার্ল্ড প্রজেক্ট</li>
+						<li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> লাইফটাইম ভিডিও অ্যাক্সেস</li>
+						<li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> অফিসিয়াল সার্টিফিকেট</li>
+						<li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> ক্যারিয়ার গাইডেন্স ও জব সাপোর্ট</li>
+						<li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> থিসিস ও রিসার্চ সাপোর্ট</li>
 					</ul>
 				</div>
 			</div>
@@ -347,39 +492,39 @@
 					<div class="w-4/12">
 						<div class="relative">
 							<div class="bg-indigo-100 rounded-xl w-full h-32 flex items-center justify-center">
-								<i class="fas fa-calendar-alt text-indigo-600 text-3xl"></i>
+								<i class="fas fa-brain text-indigo-600 text-3xl"></i>
 							</div>
 						</div>
 					</div>
 					<div class="w-8/12">
-						<h1 class="text-gray-800 text-sm sm:text-lg font-semibold">Course Duration & Schedule</h1>
-						<p class="text-gray-500 my-2 sm:my-4 text-xs sm:text-md">3 Months | Live Classes: 7:30 PM - 9:30 PM (3 days/week)</p>
+						<h1 class="text-gray-800 text-sm sm:text-lg font-semibold">মেশিন লার্নিং ফান্ডামেন্টাল</h1>
+						<p class="text-gray-500 my-2 sm:my-4 text-xs sm:text-md">Python বেসিক থেকে শুরু করে মেশিন লার্নিং অ্যালগরিদম</p>
 					</div>
 				</div>
 				<div class="flex space-x-5">
 					<div class="w-4/12">
 						<div class="relative">
 							<div class="bg-green-100 rounded-xl w-full h-32 flex items-center justify-center">
-								<i class="fas fa-users text-green-600 text-3xl"></i>
+								<i class="fas fa-chart-bar text-green-600 text-3xl"></i>
 							</div>
 						</div>
 					</div>
 					<div class="w-8/12">
-						<h1 class="text-gray-800 text-sm sm:text-lg font-semibold">Batch Information</h1>
-						<p class="text-gray-500 my-2 sm:my-4 text-xs sm:text-md">Batch 04 (Running) | Limited Seats Available</p>
+						<h1 class="text-gray-800 text-sm sm:text-lg font-semibold">ডেটা সায়েন্স লাইব্রেরি</h1>
+						<p class="text-gray-500 my-2 sm:my-4 text-xs sm:text-md">Pandas, NumPy, Matplotlib, Scikit-learn এর ব্যবহার</p>
 					</div>
 				</div>
 				<div class="flex space-x-5">
 					<div class="w-4/12">
 						<div class="relative">
 							<div class="bg-purple-100 rounded-xl w-full h-32 flex items-center justify-center">
-								<i class="fas fa-headset text-purple-600 text-3xl"></i>
+								<i class="fas fa-project-diagram text-purple-600 text-3xl"></i>
 							</div>
 						</div>
 					</div>
 					<div class="w-8/12">
-						<h1 class="text-gray-800 text-sm sm:text-lg font-semibold">Support & Community</h1>
-						<p class="text-gray-500 my-2 sm:my-4 text-xs sm:text-md">24/7 WhatsApp Support | Alumni Network | Job Placement Assistance</p>
+						<h1 class="text-gray-800 text-sm sm:text-lg font-semibold">প্রজেক্ট ভিত্তিক শিখুন</h1>
+						<p class="text-gray-500 my-2 sm:my-4 text-xs sm:text-md">বাস্তবিক প্রজেক্ট করে রিয়েল এক্সপেরিয়েন্স পান</p>
 					</div>
 				</div>
 			</div>
@@ -392,29 +537,29 @@
 		<div class="max-w-lg mx-auto">
 			<div class="flex py-12 justify-center text-white items-center px-20 sm:px-36">
 				<div class="relative">
-					<h1 class="font-bold text-xl pr-5 relative z-50">SECRET CODER</h1>
+					<h1 class="font-bold text-xl pr-5 relative z-50">সিক্রেট কোডার</h1>
 					<svg class="w-11 h-11 absolute -top-2 -left-3 z-40" viewBox="0 0 79 79" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M35.9645 2.94975C37.9171 0.997129 41.0829 0.997127 43.0355 2.94975L76.0502 35.9645C78.0029 37.9171 78.0029 41.0829 76.0503 43.0355L43.0355 76.0502C41.0829 78.0029 37.9171 78.0029 35.9645 76.0503L2.94975 43.0355C0.997129 41.0829 0.997127 37.9171 2.94975 35.9645L35.9645 2.94975Z" stroke="#4F46E5" stroke-width="2"/>
 					</svg>
 				</div>
-				<span class="border-l border-gray-500 text-sm pl-5 py-2 font-semibold">Python & Machine Learning Experts</span>
+				<span class="border-l border-gray-500 text-sm pl-5 py-2 font-semibold">মেশিন লার্নিং বিশেষজ্ঞ</span>
 			</div>
 			<div class="text-center pb-16 pt-5">
-				<label class="text-gray-300 font-semibold">Get Free Course Consultation</label>
+				<label class="text-gray-300 font-semibold">কোর্স সম্পর্কে ফ্রি কনসাল্টেশন নিন</label>
 				<div class="px-5 sm:px-0 flex flex-col sm:flex-row sm:space-x-3 space-y-3 sm:space-y-0 justify-center mt-3">
-					<input type="email" placeholder="Your Email" class="rounded-full py-2 pl-5 bg-transparent border border-gray-400">
-					<button type="submit" class="text-white w-40 sm:w-auto mx-auto sm:mx-0 font-semibold px-5 py-2 rounded-full" style="background: linear-gradient(105.5deg, #4F46E5 19.57%, #3730A3 78.85%);">Get Consultation</button>
+					<input type="email" placeholder="আপনার ইমেইল" class="rounded-full py-2 pl-5 bg-transparent border border-gray-400">
+					<button type="submit" class="text-white w-40 sm:w-auto mx-auto sm:mx-0 font-semibold px-5 py-2 rounded-full" style="background: linear-gradient(105.5deg, #4F46E5 19.57%, #3730A3 78.85%);">কনসাল্টেশন নিন</button>
 				</div>
 			</div>
 			<div class="flex items-center text-gray-400 text-sm justify-center">
-				<a href="" class="pr-3">Courses</a>
-				<a href="" class="border-l border-gray-400 px-3">Privacy</a>
-				<a href="" class="border-l border-gray-400 pl-3">Terms & Conditions</a>
+				<a href="" class="pr-3">কোর্স সমূহ</a>
+				<a href="" class="border-l border-gray-400 px-3">প্রাইভেসি</a>
+				<a href="" class="border-l border-gray-400 pl-3">শর্তাবলী</a>
 			</div>
 			<div class="text-center text-white">
-				<p class="my-3 text-gray-400 text-sm">Contact: WhatsApp 01893-255503 </p>
+				<p class="my-3 text-gray-400 text-sm">যোগাযোগ: WhatsApp ০১৮৯৩-২৫৫৫০৩ </p>
 				<div class="py-3 tracking-wide">
-					<p>&copy; 2024 Secret Coder. All rights reserved.</p>
+					<p>&copy; 2026 সিক্রেট কোডার। সর্বস্বত্ব সংরক্ষিত।</p>
 				</div>
 			</div>
 		</div>
