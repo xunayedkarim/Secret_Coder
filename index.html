@@ -28,6 +28,25 @@
 			50% { transform: translatey(-20px); }
 			100% { transform: translatey(0px); }
 		}
+
+
+
+    /* ফুটার গ্যাপ ফিক্স */
+    footer .container {
+        width: 100%;
+        max-width: 1280px; /* max-w-screen-xl */
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem; /* px-4 */
+        padding-right: 1rem; /* px-4 */
+    }
+    
+    @media (min-width: 1024px) {
+        footer .container {
+            padding-left: 2rem; /* lg:px-8 */
+            padding-right: 2rem; /* lg:px-8 */
+        }
+    }
 	</style>
 	<!-- Bangla font -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
