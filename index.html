@@ -601,7 +601,7 @@
                                 <div class="relative">
                                     <div class="w-64 h-64 mx-auto md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-xl">
                                         <!-- ছাত্র ১ এর ছবি -->
-                                        <img src="img/student-1.jpg" alt="রাজন আহমেদ" class="w-full h-full object-cover">
+                                        <img src="img/testimonials.png" alt="রাজন আহমেদ" class="w-full h-full object-cover">
                                     </div>
                                     <div class="absolute -bottom-4 -right-4 bg-indigo-600 text-white w-16 h-16 rounded-full flex flex-col items-center justify-center transform rotate-12 shadow-lg">
                                         <i class="fas fa-quote-left text-lg"></i>
@@ -773,38 +773,6 @@
     </div>
 </div>
 
-<!-- Auto-play Script -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const testimonialSlider = document.querySelector('[x-data*="activeSlide"]');
-        if (!testimonialSlider) return;
-        
-        const sliderData = Alpine.$data(testimonialSlider);
-        let interval;
-        
-        function startAutoPlay() {
-            interval = setInterval(() => {
-                sliderData.activeSlide = (sliderData.activeSlide + 1) % sliderData.slides;
-            }, 5000); // 5 seconds interval
-        }
-        
-        function stopAutoPlay() {
-            clearInterval(interval);
-        }
-        
-        startAutoPlay();
-        
-        // Pause on hover
-        testimonialSlider.addEventListener('mouseenter', stopAutoPlay);
-        testimonialSlider.addEventListener('mouseleave', startAutoPlay);
-        
-        // Pause on touch
-        testimonialSlider.addEventListener('touchstart', stopAutoPlay);
-        testimonialSlider.addEventListener('touchend', () => {
-            setTimeout(startAutoPlay, 3000);
-        });
-    });
-</script>
 
 		<!-- কোর্স সারাংশ -->
 		<div data-aos="zoom-in" class="mt-16 text-center">
@@ -923,5 +891,49 @@
     <script>
     	AOS.init();
     </script>
+
+<!-- Auto-play Script -->
+
+<!-- Alpine.js init -->
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('testimonialSlider', () => ({
+            activeSlide: 0,
+            slides: 3,
+            interval: null,
+            
+            init() {
+                this.startAutoPlay();
+                
+                // Pause on hover
+                this.$el.addEventListener('mouseenter', () => this.stopAutoPlay());
+                this.$el.addEventListener('mouseleave', () => this.startAutoPlay());
+                
+                // Pause on touch
+                this.$el.addEventListener('touchstart', () => this.stopAutoPlay());
+                this.$el.addEventListener('touchend', () => {
+                    setTimeout(() => this.startAutoPlay(), 3000);
+                });
+            },
+            
+            startAutoPlay() {
+                this.stopAutoPlay();
+                this.interval = setInterval(() => {
+                    this.activeSlide = (this.activeSlide + 1) % this.slides;
+                }, 5000);
+            },
+            
+            stopAutoPlay() {
+                if (this.interval) {
+                    clearInterval(this.interval);
+                    this.interval = null;
+                }
+            }
+        }));
+    });
+</script>
+
+</body>
+</html>
 </body>
 </html>
