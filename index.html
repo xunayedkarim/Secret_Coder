@@ -906,7 +906,11 @@
 </div>
 	<!-- .container -->
 
-	<footer class="mt-32 relative overflow-hidden" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);">
+
+
+
+
+		<footer class="mt-32 relative overflow-hidden" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);">
     <!-- Background Effects -->
     <div class="absolute inset-0 overflow-hidden">
         <div class="absolute -top-40 -right-40 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
@@ -917,10 +921,10 @@
     <div class="relative z-10">
         <!-- Main Footer Content -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <!-- Top Section -->
+            <!-- Top Section - Fixed layout -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
                 <!-- Brand Section -->
-                <div>
+                <div class="px-0 sm:px-2">
                     <div class="flex items-center mb-8">
                         <div class="relative">
                             <h1 class="text-3xl font-bold text-white pr-5 relative z-50 tracking-tight">সিক্রেট কোডার</h1>
@@ -955,8 +959,8 @@
                     </div>
                 </div>
 
-                <!-- Quick Links -->
-                <div class="grid grid-cols-2 gap-8">
+                <!-- Quick Links - Fixed spacing -->
+                <div class="grid grid-cols-2 gap-8 px-0 sm:px-4">
                     <div>
                         <h3 class="text-white font-bold text-lg mb-6 pb-2 border-b border-gray-700 inline-block">দ্রুত লিংক</h3>
                         <ul class="space-y-4">
@@ -1017,20 +1021,20 @@
                     </div>
                 </div>
 
-                <!-- Newsletter & Contact -->
-                <div>
+                <!-- Newsletter & Contact - Fixed spacing -->
+                <div class="px-0 sm:px-2">
                     <h3 class="text-white font-bold text-lg mb-6 pb-2 border-b border-gray-700 inline-block">নিউজলেটার</h3>
                     <p class="text-gray-300 mb-6">
                         ফ্রি রিসোর্স, টিউটোরিয়াল এবং নতুন কোর্সের আপডেট পান
                     </p>
                     
                     <div class="mb-8">
-                        <div class="flex bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="flex bg-gray-800 rounded-xl overflow-hidden border border-gray-700">
                             <input type="email" 
                                    placeholder="আপনার ইমেইল এড্রেস" 
-                                   class="flex-grow bg-transparent text-white px-6 py-4 focus:outline-none">
+                                   class="flex-grow bg-transparent text-white px-6 py-4 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
                             <button type="submit" 
-                                    class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 hover:opacity-90 transition">
+                                    class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 hover:opacity-90 transition whitespace-nowrap">
                                 সাবস্ক্রাইব
                             </button>
                         </div>
@@ -1039,22 +1043,22 @@
 
                     <!-- Contact Info -->
                     <div class="space-y-4">
-                        <div class="flex items-center text-gray-300">
+                        <div class="flex items-center text-gray-300 bg-gray-900/50 p-4 rounded-xl border border-gray-800">
                             <div class="bg-indigo-900/50 p-3 rounded-lg mr-4">
-                                <i class="fab fa-whatsapp text-green-400"></i>
+                                <i class="fab fa-whatsapp text-green-400 text-xl"></i>
                             </div>
                             <div>
-                                <p class="text-sm text-gray-400">২৪/৭ সাপোর্ট</p>
-                                <p class="font-semibold">০১৮৯৩-২৫৫৫০৩</p>
+                                <p class="text-sm text-gray-400">২৪/৭ WhatsApp সাপোর্ট</p>
+                                <p class="font-semibold text-white">০১৮৯৩-২৫৫৫০৩</p>
                             </div>
                         </div>
-                        <div class="flex items-center text-gray-300">
+                        <div class="flex items-center text-gray-300 bg-gray-900/50 p-4 rounded-xl border border-gray-800">
                             <div class="bg-indigo-900/50 p-3 rounded-lg mr-4">
-                                <i class="fas fa-envelope text-indigo-400"></i>
+                                <i class="fas fa-envelope text-indigo-400 text-xl"></i>
                             </div>
                             <div>
                                 <p class="text-sm text-gray-400">ইমেইল</p>
-                                <p class="font-semibold">info@secretcoder.com</p>
+                                <p class="font-semibold text-white">info@secretcoder.com</p>
                             </div>
                         </div>
                     </div>
@@ -1064,8 +1068,8 @@
             <!-- Divider -->
             <div class="border-t border-gray-800 my-12"></div>
 
-            <!-- Bottom Section -->
-            <div class="flex flex-col md:flex-row justify-between items-center">
+            <!-- Bottom Section - Fixed alignment -->
+            <div class="flex flex-col md:flex-row justify-between items-center px-0 sm:px-2">
                 <div class="text-gray-400 mb-6 md:mb-0">
                     <p class="flex items-center">
                         <i class="fas fa-map-marker-alt text-indigo-400 mr-2"></i>
@@ -1074,19 +1078,22 @@
                 </div>
                 
                 <div class="flex items-center space-x-6 text-gray-400">
-                    <a href="#" class="hover:text-white transition">প্রাইভেসি পলিসি</a>
-                    <a href="#" class="hover:text-white transition">শর্তাবলী</a>
-                    <a href="#" class="hover:text-white transition">কুকি পলিসি</a>
-                    <a href="#" class="hover:text-white transition">সাইটম্যাপ</a>
+                    <a href="#" class="hover:text-white transition hover:underline">প্রাইভেসি পলিসি</a>
+                    <span class="text-gray-600">•</span>
+                    <a href="#" class="hover:text-white transition hover:underline">শর্তাবলী</a>
+                    <span class="text-gray-600">•</span>
+                    <a href="#" class="hover:text-white transition hover:underline">কুকি পলিসি</a>
+                    <span class="text-gray-600">•</span>
+                    <a href="#" class="hover:text-white transition hover:underline">সাইটম্যাপ</a>
                 </div>
             </div>
 
-            <!-- Copyright -->
-            <div class="mt-12 pt-8 border-t border-gray-800 text-center">
+            <!-- Copyright - Center aligned -->
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center px-0 sm:px-2">
                 <p class="text-gray-500 mb-4">
                     &copy; ২০২৬ <span class="text-indigo-400 font-semibold">সিক্রেট কোডার</span>. সকল স্বত্ব সংরক্ষিত।
-                    <span class="mx-2">•</span>
-                    যত্নের সাথে তৈরি করা 🇧🇩
+                    <span class="mx-2 text-gray-600">•</span>
+                    <span class="text-red-500">🇧🇩</span> বাংলাদেশ
                 </p>
                 <p class="text-gray-600 text-sm">
                     সংকল্প: "প্রতিটি বাংলাদেশি তরুণকে টেকনোলজিতে দক্ষ করে তোলা"
@@ -1099,11 +1106,12 @@
     <a href="https://wa.me/8801893255503" 
        class="fixed bottom-6 right-6 bg-gradient-to-r from-green-500 to-emerald-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl transform transition hover:scale-110 z-50 group">
         <i class="fab fa-whatsapp text-2xl"></i>
-        <span class="absolute -top-10 right-0 bg-gray-900 text-white text-xs py-1 px-3 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+        <span class="absolute -top-10 right-0 bg-gray-900 text-white text-xs py-1 px-3 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">
             WhatsApp এ ভর্তি হোন
         </span>
     </a>
 </footer>
+	
 	<!-- Font Awesome for icons -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 	
