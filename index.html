@@ -923,7 +923,18 @@ html, body {
 	<!-- AOS init -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-    	AOS.init();
+    	AOS.init({
+        disableMutationObserver: false,
+        offset: 120,
+        delay: 0,
+        duration: 400,
+        easing: 'ease',
+        once: true,
+        mirror: false,
+        anchorPlacement: 'top-bottom',
+        // এটিই মূল সমাধান:
+        startEvent: 'DOMContentLoaded',
+    });
     </script>
 
 <footer class="mt-32 relative overflow-hidden w-full" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);">
