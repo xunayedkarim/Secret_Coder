@@ -71,8 +71,11 @@
 				<p data-aos="fade-down" data-aos-once="true" data-aos-delay="500" class="text-lg text-gray-600 mb-8">
 					মেশিন লার্নিং শিখতে চাও কিন্তু...<br>
 					❌ কোথা থেকে শুরু করবে বুঝতে পারছো না?<br>
-					❌ র‍্যান্ডম টিউটোরিয়াল দেখে কনফিউজ হয়ে যাচ্ছো?<br><br>
-					👉 এই ৩-মাসের মেশিন লার্নিং বুটক্যাম্প তোমাকে জিরো থেকে কনফিডেন্ট লেভেলে নিয়ে যাবে।
+					❌ র‍্যান্ডম টিউটোরিয়াল দেখে কনফিউজ হয়ে যাচ্ছো?<br>
+					❌ প্র্যাক্টিক্যাল প্রজেক্ট বানানোর সঠিক গাইড নেই?<br><br>
+
+এই ৩-মাসের মেশিন লার্নিং বুটক্যাম্প তোমাকে জিরো থেকে কনফিডেন্ট লেভেলে নিয়ে যাবে, 
+ব্যক্তিগত mentorship এবং বাস্তব প্রজেক্টের মাধ্যমে। 				
 				</p>
 				<div data-aos="fade-up" data-aos-once="true" data-aos-delay="700" class="w-full md:flex items-center justify-center lg:justify-start md:space-x-5">
 					<a href="https://wa.me/8801893255503" class="lg:mx-0 bg-indigo-600 text-white text-xl font-bold rounded-full py-4 px-9 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out">
@@ -568,28 +571,267 @@
 		</div>
 
 		<!-- সাফল্যের গল্প -->
-		<div class="mt-24 flex flex-col-reverse md:flex-row items-start md:space-x-10">
-			<div data-aos="zoom-in-right" class="md:w-5/12">
-				<div class="flex items-center space-x-20 mb-5">
-					<span class="border border-gray-300 w-14 absolute"></span>
-					<h1 class="text-gray-400 tracking-widest text-sm">সাফল্যের গল্প</h1>
-				</div>
-				<h1 class="font-semibold text-darken text-2xl lg:pr-40">আমাদের শিক্ষার্থীরা <span class="text-indigo-600">কি বলে?</span></h1>
-				<p class="text-gray-500 my-5 lg:pr-36">আমাদের শিক্ষার্থীরা এখন কাজ করছে বিভিন্ন নামীদামী কোম্পানিতে।</p>
-				<p class="text-gray-500 my-5 lg:pr-36">তাদের সাফল্য গল্প থেকে অনুপ্রাণিত হোন।</p>
-				<a href="https://wa.me/8801893255503" class="flex items-center space-x-3 pl-3 border-b border-l border-t border-indigo-600 text-indigo-600 font-medium my-4 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out rounded-full">
-					<span>আলোচনা করুন</span>
-					<div class="border border-indigo-600 h-14 w-14 rounded-full flex items-center justify-center">
-						<svg class="w-5 h-5" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M25.7071 8.70711C26.0976 8.31658 26.0976 7.68342 25.7071 7.2929L19.3431 0.928934C18.9526 0.538409 18.3195 0.538409 17.9289 0.928934C17.5384 1.31946 17.5384 1.95262 17.9289 2.34315L23.5858 8L17.9289 13.6569C17.5384 14.0474 17.5384 14.6805 17.9289 15.0711C18.3195 15.4616 18.9526 15.4616 19.3431 15.0711L25.7071 8.70711ZM-8.74228e-08 9L25 9L25 7L8.74228e-08 7L-8.74228e-08 9Z" fill="#4F46E5"/>
-						</svg>
-					</div>
-				</a>
-			</div>
-			<div data-aos="zoom-in-left" class="md:w-7/12">
-				<img class="md:w-10/12 mx-auto" src="img/testimonials.png">
-			</div>
-		</div>
+		<!-- সাফল্যের গল্প -->
+<div class="mt-24">
+    <div class="text-center mb-12">
+        <div class="flex items-center justify-center space-x-20 mb-5">
+            <span class="border border-gray-300 w-14"></span>
+            <h1 class="text-gray-400 tracking-widest text-sm">সাফল্যের গল্প</h1>
+            <span class="border border-gray-300 w-14"></span>
+        </div>
+        <h1 class="font-semibold text-darken text-3xl mb-6">আমাদের শিক্ষার্থীরা <span class="text-indigo-600">কি বলে?</span></h1>
+        <p class="text-gray-500 max-w-2xl mx-auto">আমাদের শিক্ষার্থীরা এখন কাজ করছে বিভিন্ন নামীদামী কোম্পানিতে। তাদের সাফল্য গল্প থেকে অনুপ্রাণিত হোন।</p>
+    </div>
+
+    <!-- টেস্টিমোনিয়াল স্লাইডার -->
+    <div x-data="{
+        currentIndex: 0,
+        testimonials: [
+            {
+                name: 'রাজন আহমেদ',
+                role: 'সফটওয়্যার ইঞ্জিনিয়ার',
+                company: 'DataSoft',
+                image: 'img/students/rajon.jpg',
+                quote: 'আমি মেশিন লার্নিং সম্পর্কে জিরো নলেজ দিয়ে শুরু করেছিলাম, কিন্তু সিক্রেট কোডারের বুটক্যাম্প শেষ করার পর এখন রিয়েল ওয়ার্ল্ড প্রজেক্ট বানাতে কনফিডেন্ট। জুনায়েদ করিম স্যারের মেন্টরশিপ সবচেয়ে বড় ডিফারেন্স তৈরি করেছে!',
+                rating: 5
+            },
+            {
+                name: 'তানভীর হোসেন',
+                role: 'মেশিন লার্নিং ইঞ্জিনিয়ার',
+                company: 'Brain Station 23',
+                image: 'img/students/tanvir.jpg',
+                quote: 'সিক্রেট কোডার আমাকে কমপ্লেক্স কনসেপ্ট সহজে বুঝতে সাহায্য করেছে এবং হ্যান্ডস-অন প্রজেক্টের মাধ্যমে গাইড করেছে। পার্সোনাল মেন্টরশিপ এবং ক্যারিয়ার-ফোকাসড অ্যাপ্রোচ আমাকে আত্মবিশ্বাস দিয়েছে যা আগে কখনো ছিল না।',
+                rating: 5
+            },
+            {
+                name: 'সোহানা রহমান',
+                role: 'ডেটা সায়েন্টিস্ট',
+                company: 'bKash',
+                image: 'img/students/sohana.jpg',
+                quote: 'কনফিউশন থেকে ক্লিয়ারিটি! এই ৩ মাসের বুটক্যাম্প আমাকে ML সম্পর্কে কিছু না জানা থেকে প্র্যাকটিক্যালি এপ্লাই করতে কনফিডেন্ট বানিয়েছে। মেন্টর জুনায়েদ করিমের গাইডেন্স অসাধারণ ছিল!',
+                rating: 5
+            }
+        ],
+        next() {
+            this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
+        },
+        prev() {
+            this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
+        }
+    }" class="relative">
+        <!-- টেস্টিমোনিয়াল কন্টেন্ট -->
+        <div class="max-w-4xl mx-auto">
+            <div x-show="currentIndex === 0" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-x-10" x-transition:enter-end="opacity-100 transform translate-x-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 transform translate-x-0" x-transition:leave-end="opacity-0 transform -translate-x-10" class="bg-white rounded-2xl shadow-xl p-8 md:p-10">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="w-32 h-32 flex-shrink-0">
+                        <div class="relative">
+                            <img :src="testimonials[0].image" :alt="testimonials[0].name" class="w-32 h-32 rounded-full object-cover border-4 border-indigo-100">
+                            <div class="absolute -bottom-2 -right-2 bg-indigo-600 text-white w-10 h-10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-quote-left text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <h3 class="font-bold text-lg text-darken">রাজন আহমেদ</h3>
+                            <p class="text-sm text-gray-600">সফটওয়্যার ইঞ্জিনিয়ার</p>
+                            <p class="text-xs text-indigo-600 font-medium">DataSoft</p>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="mb-4">
+                            <div class="flex text-yellow-400 mb-3">
+                                <template x-for="i in testimonials[0].rating" :key="i">
+                                    <i class="fas fa-star"></i>
+                                </template>
+                            </div>
+                            <p class="text-gray-700 text-lg italic leading-relaxed">"আমি মেশিন লার্নিং সম্পর্কে জিরো নলেজ দিয়ে শুরু করেছিলাম, কিন্তু সিক্রেট কোডারের বুটক্যাম্প শেষ করার পর এখন রিয়েল ওয়ার্ল্ড প্রজেক্ট বানাতে কনফিডেন্ট। জুনায়েদ করিম স্যারের মেন্টরশিপ সবচেয়ে বড় ডিফারেন্স তৈরি করেছে!"</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-6">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-indigo-600 rounded-full"></div>
+                                <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+                                <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+                            </div>
+                            <a href="https://wa.me/8801893255503" class="text-indigo-600 font-medium hover:text-indigo-800 flex items-center">
+                                <span>রাজনের সাথে কথা বলুন</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div x-show="currentIndex === 1" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-x-10" x-transition:enter-end="opacity-100 transform translate-x-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 transform translate-x-0" x-transition:leave-end="opacity-0 transform -translate-x-10" class="bg-white rounded-2xl shadow-xl p-8 md:p-10">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="w-32 h-32 flex-shrink-0">
+                        <div class="relative">
+                            <img :src="testimonials[1].image" :alt="testimonials[1].name" class="w-32 h-32 rounded-full object-cover border-4 border-green-100">
+                            <div class="absolute -bottom-2 -right-2 bg-green-600 text-white w-10 h-10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-quote-left text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <h3 class="font-bold text-lg text-darken">তানভীর হোসেন</h3>
+                            <p class="text-sm text-gray-600">মেশিন লার্নিং ইঞ্জিনিয়ার</p>
+                            <p class="text-xs text-green-600 font-medium">Brain Station 23</p>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="mb-4">
+                            <div class="flex text-yellow-400 mb-3">
+                                <template x-for="i in testimonials[1].rating" :key="i">
+                                    <i class="fas fa-star"></i>
+                                </template>
+                            </div>
+                            <p class="text-gray-700 text-lg italic leading-relaxed">"সিক্রেট কোডার আমাকে কমপ্লেক্স কনসেপ্ট সহজে বুঝতে সাহায্য করেছে এবং হ্যান্ডস-অন প্রজেক্টের মাধ্যমে গাইড করেছে। পার্সোনাল মেন্টরশিপ এবং ক্যারিয়ার-ফোকাসড অ্যাপ্রোচ আমাকে আত্মবিশ্বাস দিয়েছে যা আগে কখনো ছিল না।"</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-6">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+                                <div class="w-2 h-2 bg-indigo-600 rounded-full"></div>
+                                <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+                            </div>
+                            <a href="https://wa.me/8801893255503" class="text-green-600 font-medium hover:text-green-800 flex items-center">
+                                <span>তানভীরের সাথে কথা বলুন</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div x-show="currentIndex === 2" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-x-10" x-transition:enter-end="opacity-100 transform translate-x-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 transform translate-x-0" x-transition:leave-end="opacity-0 transform -translate-x-10" class="bg-white rounded-2xl shadow-xl p-8 md:p-10">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="w-32 h-32 flex-shrink-0">
+                        <div class="relative">
+                            <img :src="testimonials[2].image" :alt="testimonials[2].name" class="w-32 h-32 rounded-full object-cover border-4 border-purple-100">
+                            <div class="absolute -bottom-2 -right-2 bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-quote-left text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <h3 class="font-bold text-lg text-darken">সোহানা রহমান</h3>
+                            <p class="text-sm text-gray-600">ডেটা সায়েন্টিস্ট</p>
+                            <p class="text-xs text-purple-600 font-medium">bKash</p>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="mb-4">
+                            <div class="flex text-yellow-400 mb-3">
+                                <template x-for="i in testimonials[2].rating" :key="i">
+                                    <i class="fas fa-star"></i>
+                                </template>
+                            </div>
+                            <p class="text-gray-700 text-lg italic leading-relaxed">"কনফিউশন থেকে ক্লিয়ারিটি! এই ৩ মাসের বুটক্যাম্প আমাকে ML সম্পর্কে কিছু না জানা থেকে প্র্যাকটিক্যালি এপ্লাই করতে কনফিডেন্ট বানিয়েছে। মেন্টর জুনায়েদ করিমের গাইডেন্স অসাধারণ ছিল!"</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-6">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+                                <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+                                <div class="w-2 h-2 bg-indigo-600 rounded-full"></div>
+                            </div>
+                            <a href="https://wa.me/8801893255503" class="text-purple-600 font-medium hover:text-purple-800 flex items-center">
+                                <span>সোহানার সাথে কথা বলুন</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- নেভিগেশন বাটন -->
+        <div class="flex justify-center mt-8 space-x-4">
+            <button @click="prev()" class="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-50 transition">
+                <i class="fas fa-chevron-left text-gray-600"></i>
+            </button>
+            <button @click="next()" class="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-50 transition">
+                <i class="fas fa-chevron-right text-gray-600"></i>
+            </button>
+        </div>
+
+        <!-- অটো-রোটেশন -->
+        <script>
+            document.addEventListener('alpine:init', () => {
+                setInterval(() => {
+                    const app = Alpine.$data(document.querySelector('[x-data]'));
+                    if (app) app.next();
+                }, 5000); // প্রতি ৫ সেকেন্ডে পরিবর্তন
+            });
+        </script>
+    </div>
+
+    <!-- সব টেস্টিমোনিয়াল একসাথে -->
+    <div class="grid md:grid-cols-3 gap-8 mt-16">
+        <div data-aos="fade-up" class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+            <div class="flex items-center mb-4">
+                <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                    <img src="img/students/rajon.jpg" alt="রাজন আহমেদ" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-800">রাজন আহমেদ</h4>
+                    <p class="text-sm text-gray-600">সফটওয়্যার ইঞ্জিনিয়ার</p>
+                    <div class="flex text-yellow-400 text-sm">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <p class="text-gray-600 text-sm italic">"জিরো থেকে শুরু করে এখন রিয়েল প্রজেক্ট বানাতে পারি। জুনায়েদ স্যারের মেন্টরশিপ অসাধারণ!"</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="150" class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+            <div class="flex items-center mb-4">
+                <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                    <img src="img/students/tanvir.jpg" alt="তানভীর হোসেন" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-800">তানভীর হোসেন</h4>
+                    <p class="text-sm text-gray-600">মেশিন লার্নিং ইঞ্জিনিয়ার</p>
+                    <div class="flex text-yellow-400 text-sm">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <p class="text-gray-600 text-sm italic">"কমপ্লেক্স কনসেপ্ট সহজে বুঝতে সাহায্য করেছে। পার্সোনাল মেন্টরশিপ অনেক ভালো ছিল!"</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="300" class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+            <div class="flex items-center mb-4">
+                <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                    <img src="img/students/sohana.jpg" alt="সোহানা রহমান" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-800">সোহানা রহমান</h4>
+                    <p class="text-sm text-gray-600">ডেটা সায়েন্টিস্ট</p>
+                    <div class="flex text-yellow-400 text-sm">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <p class="text-gray-600 text-sm italic">"কনফিউশন থেকে ক্লিয়ারিটি! এই বুটক্যাম্প আমার ক্যারিয়ার পরিবর্তন করেছে।"</p>
+        </div>
+    </div>
+
+    <!-- স্টুডেন্টদের কাজ দেখুন -->
+    <div class="text-center mt-12">
+        <a href="https://wa.me/8801893255503" class="inline-flex items-center px-8 py-3 bg-indigo-600 text-white font-medium rounded-full hover:bg-indigo-700 transition transform hover:scale-105">
+            <i class="fab fa-whatsapp mr-3"></i>
+            <span>আরও সাফল্যের গল্প জানতে WhatsApp এ যোগাযোগ করুন</span>
+        </a>
+        <p class="text-sm text-gray-500 mt-4">আমাদের ২০০+ সফল শিক্ষার্থী এখন বিভিন্ন কোম্পানিতে কাজ করছে</p>
+    </div>
+</div>
 
 		<!-- কোর্স সারাংশ -->
 		<div data-aos="zoom-in" class="mt-16 text-center">
