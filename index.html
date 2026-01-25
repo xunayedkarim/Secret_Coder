@@ -41,6 +41,19 @@ html, body {
         max-width: none;
     }
 }
+
+
+#certificate-modal {
+    backdrop-filter: blur(10px);
+}
+
+.certificate-img {
+    transition: transform 0.3s ease;
+}
+
+.certificate-img:hover {
+    transform: scale(1.01);
+}
 	</style>
 	<!-- Bangla font -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -608,8 +621,230 @@ html, body {
 
      
                    
-		<!-- কোর্স সারাংশ -->
-		<!-- কোর্স সারাংশ -->
+
+
+
+
+
+<!-- সার্টিফিকেট সেকশন -->
+<section class="py-16 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">অফিসিয়াল সার্টিফিকেট</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">কোর্স সম্পন্নে পাবেন ইন্ডাস্ট্রি-স্বীকৃত সার্টিফিকেট</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left - Certificate Image -->
+            <div data-aos="fade-right" class="relative">
+                <!-- Certificate Container -->
+                <div class="relative bg-white rounded-xl shadow-2xl overflow-hidden border-4 border-white transform hover:scale-[1.02] transition duration-300">
+                    <!-- Certificate Image -->
+                    <img src="ML.png" 
+                         alt="সার্টিফিকেট ডেমো" 
+                         class="w-full h-auto rounded-lg shadow-lg">
+                    
+                    <!-- Image Overlay Effects -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none"></div>
+                    
+                    <!-- Interactive Buttons -->
+                    <div class="absolute top-4 right-4 flex space-x-2">
+                        <button onclick="zoomCertificate()" 
+                                class="bg-white/90 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-white transition hover:scale-110">
+                            <i class="fas fa-search-plus text-indigo-600"></i>
+                        </button>
+                        <button onclick="downloadDemo()" 
+                                class="bg-white/90 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-white transition hover:scale-110">
+                            <i class="fas fa-download text-indigo-600"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Certificate Badge -->
+                    <div class="absolute -top-3 -right-3 bg-indigo-600 text-white px-4 py-2 rounded-lg shadow-xl">
+                        <div class="flex items-center">
+                            <i class="fas fa-award mr-2"></i>
+                            <span class="font-bold">অফিসিয়াল</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Image Caption -->
+                <div class="mt-6 text-center">
+                    <div class="inline-flex items-center bg-indigo-50 px-4 py-2 rounded-lg">
+                        <i class="fas fa-info-circle text-indigo-600 mr-2"></i>
+                        <span class="text-gray-700">আসল সার্টিফিকেটের নমুনা</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right - Usage Points -->
+            <div data-aos="fade-left" class="space-y-8">
+                <!-- Section Header -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">সার্টিফিকেটটি যেখানে ব্যবহার করবেন</h3>
+                    <p class="text-gray-600">এই সার্টিফিকেট আপনার ক্যারিয়ারে বিভিন্নভাবে সাহায্য করবে:</p>
+                </div>
+
+                <!-- Usage Points -->
+                <div class="space-y-6">
+                    <!-- Point 1 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="bg-blue-100 w-12 h-12 rounded-xl flex items-center justify-center">
+                                <i class="fab fa-linkedin-in text-blue-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-800 mb-1">লিঙ্কডইন প্রোফাইল</h4>
+                            <p class="text-gray-600">প্রোফাইলে যোগ করে আপনার স্কিলস ভ্যালিডেট করুন। রিক্রুটাররা সহজেই দেখতে পাবেন।</p>
+                        </div>
+                    </div>
+
+                    <!-- Point 2 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="bg-green-100 w-12 h-12 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-file-alt text-green-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-800 mb-1">চাকুরির রিজিউমি</h4>
+                            <p class="text-gray-600">সিভিতে যোগ করুন। বিশেষ করে ফ্রেশ গ্র্যাজুয়েটদের জন্য এটি খুবই গুরুত্বপূর্ণ।</p>
+                        </div>
+                    </div>
+
+                    <!-- Point 3 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="bg-purple-100 w-12 h-12 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-briefcase text-purple-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-800 mb-1">ফ্রিল্যান্সিং প্ল্যাটফর্ম</h4>
+                            <p class="text-gray-600">আপওয়ার্ক, ফাইভার, Fiverr -এ ক্লায়েন্টদের বিশ্বাস অর্জনে সাহায্য করে।</p>
+                        </div>
+                    </div>
+
+                    <!-- Point 4 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="bg-orange-100 w-12 h-12 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-university text-orange-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-800 mb-1">ইউনিভার্সিটি থিসিস</h4>
+                            <p class="text-gray-600">থিসিস বা গবেষণাপত্রে আপনার এক্সপার্টিজ প্রমাণ করতে ব্যবহার করুন।</p>
+                        </div>
+                    </div>
+
+                    <!-- Point 5 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="bg-red-100 w-12 h-12 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-user-tie text-red-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-800 mb-1">প্রোমোশন/স্যালারি ইনক্রিমেন্ট</h4>
+                            <p class="text-gray-600">কোম্পানিতে প্রমোশন বা স্যালারি বৃদ্ধির জন্য অতিরিক্ত কোয়ালিফিকেশন হিসেবে ব্যবহার করুন।</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate Features -->
+                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl border border-indigo-100">
+                    <h4 class="font-bold text-lg text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-star text-yellow-500 mr-2"></i>
+                        বিশেষ বৈশিষ্ট্য
+                    </h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-sm text-gray-700">যাচাইযোগ্য</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-sm text-gray-700">ডিজিটাল + প্রিন্টেড</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-sm text-gray-700">ইন্ডাস্ট্রি স্বীকৃত</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-sm text-gray-700">আজীবন ভ্যালিড</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="pt-4">
+                    <a href="https://wa.me/8801893255503?text=সার্টিফিকেট%20সম্পর্কে%20বিস্তারিত%20জানতে%20চাই" 
+                       class="inline-flex items-center bg-green-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-700 transition mr-4">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        বিস্তারিত জানুন
+                    </a>
+                    <button onclick="downloadDemo()" 
+                            class="inline-flex items-center bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 transition">
+                        <i class="fas fa-download mr-2"></i>
+                        ডেমো দেখুন
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                <div class="text-3xl font-bold text-indigo-700">১০০%</div>
+                <div class="text-gray-600">যাচাইযোগ্য</div>
+            </div>
+            <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                <div class="text-3xl font-bold text-green-700">২৪ ঘণ্টা</div>
+                <div class="text-gray-600">ইস্যুর মধ্যে</div>
+            </div>
+            <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                <div class="text-3xl font-bold text-purple-700">৫ বছর+</div>
+                <div class="text-gray-600">ভ্যালিডিটি</div>
+            </div>
+            <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                <div class="text-3xl font-bold text-blue-700">২০০+</div>
+                <div class="text-gray-600">জারি করা হয়েছে</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certificate Modal -->
+<div id="certificate-modal" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4">
+    <div class="relative max-w-4xl w-full">
+        <button onclick="closeCertificate()" 
+                class="absolute -top-12 right-0 text-white text-2xl hover:text-red-400 transition">
+            <i class="fas fa-times"></i>
+        </button>
+        <img src="ML.png" alt="সার্টিফিকেট ফুল ভিউ" class="w-full rounded-lg shadow-2xl">
+        <div class="text-white text-center mt-4">
+            <p class="flex items-center justify-center">
+                <i class="fas fa-mouse-pointer mr-2"></i>
+                ক্লিক করুন বা ESC চাপলে বন্ধ হবে
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- কোর্স সারাংশ -->
 <div class="mt-16">
     <!-- Header -->
     <div data-aos="fade-up" class="text-center mb-12">
@@ -1023,6 +1258,45 @@ html, body {
         // এটিই মূল সমাধান:
         startEvent: 'DOMContentLoaded',
     });
+
+
+
+    // সার্টিফিকেট জুম ফাংশন
+function zoomCertificate() {
+    const modal = document.getElementById('certificate-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+}
+
+// সার্টিফিকেট বন্ধ করার ফাংশন
+function closeCertificate() {
+    const modal = document.getElementById('certificate-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = 'auto';
+}
+
+// ডেমো ডাউনলোড ফাংশন
+function downloadDemo() {
+    alert('ডেমো সার্টিফিকেট ডাউনলোড লিঙ্ক প্রস্তুত!\n\nআসল সার্টিফিকেট কোর্স সম্পন্ন করলে পাবেন।');
+    // আসলে ডাউনলোড করার জন্য:
+    // window.open('path/to/certificate-sample.pdf', '_blank');
+}
+
+// ESC কী প্রেসে মডেল বন্ধ হবে
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeCertificate();
+    }
+});
+
+// মডেলের বাইরে ক্লিক করলে বন্ধ হবে
+document.getElementById('certificate-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeCertificate();
+    }
+});
     </script>
 
 	
