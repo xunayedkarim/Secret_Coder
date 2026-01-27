@@ -157,6 +157,54 @@ html, body {
 		</div>
 	</div>
 
+
+
+
+
+
+
+
+      <!-- টাইমার সেকশন -->
+        <div data-aos="fade-up" class="mb-16">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center justify-center space-x-4 mb-6">
+                    <span class="h-px w-20 bg-gradient-to-r from-transparent to-red-500"></span>
+                    <h1 class="text-red-600 tracking-widest text-sm font-medium uppercase">সীমিত সময় অফার</h1>
+                    <span class="h-px w-20 bg-gradient-to-r from-red-500 to-transparent"></span>
+                </div>
+                <h1 class="font-bold text-darken text-3xl lg:text-4xl mb-4">ভর্তি শেষ হবে</h1>
+                <p class="text-gray-600 max-w-2xl mx-auto">৩১ জানুয়ারি ২০২৬ এর পর ভর্তি বন্ধ থাকবে। Batch 4 এর ক্লাস শুরু হবে ১ February।</p>
+            </div>
+
+            <!-- কাউন্টডাউন টাইমার -->
+            <div id="countdown-timer" class="flex justify-center space-x-2 sm:space-x-8 mb-8 px-2">
+    <div class="text-center">
+        <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-6 w-16 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center border border-gray-100">
+            <div id="days" class="text-xl sm:text-4xl font-bold text-red-600 leading-none">00</div>
+            <div class="text-[10px] sm:text-sm text-gray-500 mt-1 sm:mt-2">দিন</div>
+        </div>
+    </div>
+    <div class="text-center">
+        <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-6 w-16 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center border border-gray-100">
+            <div id="hours" class="text-xl sm:text-4xl font-bold text-red-600 leading-none">00</div>
+            <div class="text-[10px] sm:text-sm text-gray-500 mt-1 sm:mt-2">ঘণ্টা</div>
+        </div>
+    </div>
+    <div class="text-center">
+        <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-6 w-16 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center border border-gray-100">
+            <div id="minutes" class="text-xl sm:text-4xl font-bold text-red-600 leading-none">00</div>
+            <div class="text-[10px] sm:text-sm text-gray-500 mt-1 sm:mt-2">মিনিট</div>
+        </div>
+    </div>
+    <div class="text-center">
+        <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-6 w-16 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center border border-gray-100">
+            <div id="seconds" class="text-xl sm:text-4xl font-bold text-red-600 leading-none">00</div>
+            <div class="text-[10px] sm:text-sm text-gray-500 mt-1 sm:mt-2">সেকেন্ড</div>
+        </div>
+    </div>
+</div>
+           
+
 	<!-- container -->
 <div class="container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700">
 		<!-- প্রযুক্তি সমূহ -->
@@ -845,69 +893,7 @@ html, body {
 <div class="mt-24 py-16 bg-gradient-to-b from-white to-indigo-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- টাইমার সেকশন -->
-        <div data-aos="fade-up" class="mb-16">
-            <div class="text-center mb-12">
-                <div class="inline-flex items-center justify-center space-x-4 mb-6">
-                    <span class="h-px w-20 bg-gradient-to-r from-transparent to-red-500"></span>
-                    <h1 class="text-red-600 tracking-widest text-sm font-medium uppercase">সীমিত সময় অফার</h1>
-                    <span class="h-px w-20 bg-gradient-to-r from-red-500 to-transparent"></span>
-                </div>
-                <h1 class="font-bold text-darken text-3xl lg:text-4xl mb-4">ভর্তি শেষ হবে</h1>
-                <p class="text-gray-600 max-w-2xl mx-auto">৩১ জানুয়ারি ২০২৬ এর পর ভর্তি বন্ধ থাকবে পরবর্তী ব্যাচের জন্য</p>
-            </div>
-
-            <!-- কাউন্টডাউন টাইমার -->
-            <div id="countdown-timer" class="flex justify-center space-x-4 sm:space-x-8 mb-8">
-                <div class="text-center">
-                    <div class="bg-white rounded-2xl shadow-xl p-6 w-24 h-24 flex flex-col items-center justify-center">
-                        <div id="days" class="text-4xl font-bold text-red-600">00</div>
-                        <div class="text-sm text-gray-500 mt-2">দিন</div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <div class="bg-white rounded-2xl shadow-xl p-6 w-24 h-24 flex flex-col items-center justify-center">
-                        <div id="hours" class="text-4xl font-bold text-red-600">00</div>
-                        <div class="text-sm text-gray-500 mt-2">ঘণ্টা</div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <div class="bg-white rounded-2xl shadow-xl p-6 w-24 h-24 flex flex-col items-center justify-center">
-                        <div id="minutes" class="text-4xl font-bold text-red-600">00</div>
-                        <div class="text-sm text-gray-500 mt-2">মিনিট</div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <div class="bg-white rounded-2xl shadow-xl p-6 w-24 h-24 flex flex-col items-center justify-center">
-                        <div id="seconds" class="text-4xl font-bold text-red-600">00</div>
-                        <div class="text-sm text-gray-500 mt-2">সেকেন্ড</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- প্রোগ্রেস বার -->
-            <div class="max-w-2xl mx-auto mb-8">
-                <div class="flex justify-between text-sm text-gray-600 mb-2">
-                    <span>ভর্তি চলছে</span>
-                    <span id="seat-percentage">85%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-4">
-                    <div id="seat-progress" class="bg-gradient-to-r from-green-500 to-emerald-600 h-4 rounded-full transition-all duration-500" style="width: 85%"></div>
-                </div>
-                <p class="text-center text-sm text-red-600 mt-3 font-medium">⚠️ মাত্র <span id="remaining-seats">১০</span> টি আসন বাকি!</p>
-            </div>
-
-            <!-- একশন বাটন -->
-            <div class="text-center">
-                <a href="https://wa.me/8801893255503" 
-                   class="inline-flex items-center bg-gradient-to-r from-red-600 to-orange-600 text-white font-bold py-4 px-8 rounded-xl text-lg hover:shadow-2xl transform transition hover:scale-105 duration-300 shadow-lg">
-                    <i class="fab fa-whatsapp text-2xl mr-3"></i>
-                    আসন শেষ হওয়ার আগে ভর্তি হোন
-                </a>
-                <p class="text-gray-500 mt-4 text-sm">যে কোনো প্রশ্নে কল করুন: <span class="font-bold text-indigo-700">01893-255503</span></p>
-            </div>
-        </div>
-
+      
         <!-- রোডম্যাপ PDF ডাউনলোড সেকশন -->
         <div data-aos="fade-up" data-aos-delay="200" class="bg-gradient-to-r from-indigo-900 to-purple-900 rounded-3xl shadow-2xl overflow-hidden">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
