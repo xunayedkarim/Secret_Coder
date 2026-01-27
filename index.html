@@ -839,6 +839,227 @@ html, body {
 
 
 
+<!-- কোর্স সারাংশ সেকশনের পরে এই কোডটি যোগ করুন -->
+
+<!-- টাইমার ও রোডম্যাপ সেকশন -->
+<div class="mt-24 py-16 bg-gradient-to-b from-white to-indigo-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- টাইমার সেকশন -->
+        <div data-aos="fade-up" class="mb-16">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center justify-center space-x-4 mb-6">
+                    <span class="h-px w-20 bg-gradient-to-r from-transparent to-red-500"></span>
+                    <h1 class="text-red-600 tracking-widest text-sm font-medium uppercase">সীমিত সময় অফার</h1>
+                    <span class="h-px w-20 bg-gradient-to-r from-red-500 to-transparent"></span>
+                </div>
+                <h1 class="font-bold text-darken text-3xl lg:text-4xl mb-4">ভর্তি শেষ হবে</h1>
+                <p class="text-gray-600 max-w-2xl mx-auto">৩১ জানুয়ারি ২০২৬ এর পর ভর্তি বন্ধ থাকবে পরবর্তী ব্যাচের জন্য</p>
+            </div>
+
+            <!-- কাউন্টডাউন টাইমার -->
+            <div id="countdown-timer" class="flex justify-center space-x-4 sm:space-x-8 mb-8">
+                <div class="text-center">
+                    <div class="bg-white rounded-2xl shadow-xl p-6 w-24 h-24 flex flex-col items-center justify-center">
+                        <div id="days" class="text-4xl font-bold text-red-600">00</div>
+                        <div class="text-sm text-gray-500 mt-2">দিন</div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white rounded-2xl shadow-xl p-6 w-24 h-24 flex flex-col items-center justify-center">
+                        <div id="hours" class="text-4xl font-bold text-red-600">00</div>
+                        <div class="text-sm text-gray-500 mt-2">ঘণ্টা</div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white rounded-2xl shadow-xl p-6 w-24 h-24 flex flex-col items-center justify-center">
+                        <div id="minutes" class="text-4xl font-bold text-red-600">00</div>
+                        <div class="text-sm text-gray-500 mt-2">মিনিট</div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white rounded-2xl shadow-xl p-6 w-24 h-24 flex flex-col items-center justify-center">
+                        <div id="seconds" class="text-4xl font-bold text-red-600">00</div>
+                        <div class="text-sm text-gray-500 mt-2">সেকেন্ড</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- প্রোগ্রেস বার -->
+            <div class="max-w-2xl mx-auto mb-8">
+                <div class="flex justify-between text-sm text-gray-600 mb-2">
+                    <span>ভর্তি চলছে</span>
+                    <span id="seat-percentage">85%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-4">
+                    <div id="seat-progress" class="bg-gradient-to-r from-green-500 to-emerald-600 h-4 rounded-full transition-all duration-500" style="width: 85%"></div>
+                </div>
+                <p class="text-center text-sm text-red-600 mt-3 font-medium">⚠️ মাত্র <span id="remaining-seats">১০</span> টি আসন বাকি!</p>
+            </div>
+
+            <!-- একশন বাটন -->
+            <div class="text-center">
+                <a href="https://wa.me/8801893255503" 
+                   class="inline-flex items-center bg-gradient-to-r from-red-600 to-orange-600 text-white font-bold py-4 px-8 rounded-xl text-lg hover:shadow-2xl transform transition hover:scale-105 duration-300 shadow-lg">
+                    <i class="fab fa-whatsapp text-2xl mr-3"></i>
+                    আসন শেষ হওয়ার আগে ভর্তি হোন
+                </a>
+                <p class="text-gray-500 mt-4 text-sm">যে কোনো প্রশ্নে কল করুন: <span class="font-bold text-indigo-700">01893-255503</span></p>
+            </div>
+        </div>
+
+        <!-- রোডম্যাপ PDF ডাউনলোড সেকশন -->
+        <div data-aos="fade-up" data-aos-delay="200" class="bg-gradient-to-r from-indigo-900 to-purple-900 rounded-3xl shadow-2xl overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <!-- বাম অংশ -->
+                <div class="p-8 lg:p-12">
+                    <div class="inline-flex items-center px-4 py-2 bg-indigo-800 bg-opacity-50 rounded-full mb-6">
+                        <i class="fas fa-map text-yellow-400 mr-2"></i>
+                        <span class="text-white text-sm font-medium">বিনামূল্যে ডাউনলোড</span>
+                    </div>
+                    
+                    <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">কমপ্লিট ক্যারিয়ার রোডম্যাপ</h2>
+                    
+                    <p class="text-indigo-200 mb-8 leading-relaxed">
+                        22-পৃষ্ঠার ডিটেইলড রোডম্যাপ যেখানে পাচ্ছেন:
+                    </p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                            <span class="text-white">12 মাসের স্টেপ বাই স্টেপ লার্নিং প্ল্যান</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                            <span class="text-white">৬ মাসের অ্যাডভান্সড লার্নিং গাইড</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                            <span class="text-white">১ বছরের জব রেডিনেস প্ল্যান</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                            <span class="text-white">প্রজেক্ট আইডিয়া ও রিসোর্স লিস্ট</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                            <span class="text-white">ইন্টারভিউ প্রশ্ন ও প্রিপারেশন গাইড</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="downloadRoadmap()" 
+                                class="bg-white text-indigo-900 font-bold py-4 px-8 rounded-xl hover:bg-gray-100 transition flex items-center justify-center group">
+                            <i class="fas fa-download text-xl mr-3"></i>
+                            রোডম্যাপ ডাউনলোড করুন (PDF)
+                            <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"></i>
+                        </button>
+                        
+                        <a href="https://wa.me/8801893255503?text=রোডম্যাপ%20সম্পর্কে%20বিস্তারিত%20জানতে%20চাই" 
+                           class="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-xl hover:bg-white hover:text-indigo-900 transition flex items-center justify-center">
+                            <i class="fab fa-whatsapp text-xl mr-3"></i>
+                            প্রশ্ন করুন
+                        </a>
+                    </div>
+                    
+                    <p class="text-indigo-300 text-sm mt-6">
+                        <i class="fas fa-shield-alt mr-2"></i>
+                        ১০০% ফ্রি 
+                    </p>
+                </div>
+                
+                <!-- ডান অংশ - PDF প্রিভিউ -->
+                <div class="relative h-full min-h-[400px] lg:min-h-[500px] bg-gradient-to-br from-indigo-800 to-purple-800 flex items-center justify-center p-8">
+                    <!-- PDF প্রিভিউ কন্টেইনার -->
+                    <div class="relative w-full max-w-md">
+                        <!-- PDF ডকুমেন্ট প্রিভিউ -->
+                        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                            <div class="bg-gray-800 p-4 flex items-center">
+                                <div class="flex space-x-2">
+                                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                </div>
+                                <div class="ml-4 text-gray-300 text-sm font-medium">রোডম্যাপ_বুটক্যাম্প_০৪.pdf</div>
+                            </div>
+                            
+                            <div class="p-8">
+                                <!-- PDF কভার ডিজাইন -->
+                                <div class="bg-gradient-to-br from-indigo-100 to-purple-100 rounded-xl p-8 border-2 border-dashed border-indigo-300">
+                                    <div class="text-center">
+                                        <div class="bg-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                                            <i class="fas fa-road text-white text-2xl"></i>
+                                        </div>
+                                        
+                                        <h3 class="text-2xl font-bold text-indigo-900 mb-3">ক্যারিয়ার রোডম্যাপ</h3>
+                                        <p class="text-indigo-700 mb-4">মেশিন লার্নিং স্পেশালিস্ট হওয়ার যাত্রা</p>
+                                        
+                                        <div class="grid grid-cols-2 gap-4 mt-8">
+                                            <div class="text-center">
+                                                <div class="text-3xl font-bold text-indigo-700">12</div>
+                                                <div class="text-sm text-indigo-600">মাসের প্ল্যান</div>
+                                            </div>
+                                            <div class="text-center">
+                                                <div class="text-3xl font-bold text-indigo-700">22</div>
+                                                <div class="text-sm text-indigo-600">পৃষ্ঠা</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- PDF কন্টেন্ট প্রিভিউ -->
+                                <div class="mt-6 space-y-4">
+                                    <div class="h-2 bg-gray-200 rounded-full"></div>
+                                    <div class="h-2 bg-gray-200 rounded-full w-5/6"></div>
+                                    <div class="h-2 bg-gray-200 rounded-full w-4/6"></div>
+                                    <div class="h-2 bg-gray-200 rounded-full w-3/6"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- PDF ফুটার -->
+                            <div class="bg-gray-50 p-4 border-t border-gray-200 flex justify-between items-center">
+                                <div class="text-sm text-gray-500">সিক্রেট কোডার © 2026</div>
+                                <div class="text-sm text-gray-500">পৃষ্ঠা 1/12</div>
+                            </div>
+                        </div>
+                        
+                        <!-- ডাউনলোড ইন্ডিকেটর -->
+                        <div class="absolute -bottom-6 -right-6 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-3 rounded-xl shadow-2xl transform rotate-3">
+                            <div class="flex items-center">
+                                <i class="fas fa-download text-2xl mr-3"></i>
+                                <div>
+                                    <div class="font-bold">500+</div>
+                                    <div class="text-xs">ডাউনলোড</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- স্ট্যাটস -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+            <div class="text-center p-6 bg-white rounded-2xl shadow-lg">
+                <div class="text-3xl font-bold text-indigo-700 mb-2">৫০০+</div>
+                <div class="text-gray-600">রোডম্যাপ ডাউনলোড</div>
+            </div>
+            <div class="text-center p-6 bg-white rounded-2xl shadow-lg">
+                <div class="text-3xl font-bold text-green-700 mb-2">৯২%</div>
+                <div class="text-gray-600">সফল কমপ্লিশন রেট</div>
+            </div>
+            <div class="text-center p-6 bg-white rounded-2xl shadow-lg">
+                <div class="text-3xl font-bold text-purple-700 mb-2">৩০+</div>
+                <div class="text-gray-600">জব প্লেসমেন্ট</div>
+            </div>
+            <div class="text-center p-6 bg-white rounded-2xl shadow-lg">
+                <div class="text-3xl font-bold text-blue-700 mb-2">৪.৯/৫</div>
+                <div class="text-gray-600">স্টুডেন্ট রিভিউ</div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 
@@ -1296,6 +1517,76 @@ document.getElementById('certificate-modal').addEventListener('click', function(
     if (e.target === this) {
         closeCertificate();
     }
+});
+
+
+
+
+
+// টার্গেট তারিখ: ৩১ জানুয়ারি ২০২৬
+const targetDate = new Date('January 31, 2026 23:59:59').getTime();
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const timeLeft = targetDate - now;
+    
+    // সময় গণনা
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    
+    // DOM আপডেট
+    document.getElementById('days').textContent = days.toString().padStart(2, '0');
+    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    
+    // আসনের সংখ্যা ডাইনামিক আপডেট
+    const seatPercentage = Math.min(95, 85 + Math.floor((targetDate - now) / (1000 * 60 * 60 * 24)));
+    const remainingSeats = Math.max(5, 100 - seatPercentage);
+    
+    document.getElementById('seat-percentage').textContent = seatPercentage + '%';
+    document.getElementById('seat-progress').style.width = seatPercentage + '%';
+    document.getElementById('remaining-seats').textContent = remainingSeats;
+    
+    // সময় শেষ হলে
+    if (timeLeft < 0) {
+        clearInterval(countdownInterval);
+        document.getElementById('countdown-timer').innerHTML = 
+            '<div class="text-center p-8 bg-red-100 rounded-2xl"><h3 class="text-2xl font-bold text-red-700">ভর্তি বন্ধ!</h3><p class="text-red-600">পরবর্তী ব্যাচের জন্য অপেক্ষা করুন</p></div>';
+    }
+}
+
+// রোডম্যাপ PDF ডাউনলোড ফাংশন
+function downloadRoadmap() {
+    // WhatsApp এ রিডাইরেক্ট করবে PDF লিঙ্কের জন্য
+    //window.open('https://wa.me/8801893255503?text=রোডম্যাপ%20PDF%20টি%20পেতে%20চাই', '_blank');
+    
+    // অথবা সরাসরি PDF ডাউনলোড
+     window.open('machine-learning-roadmap-v2.pdf', '_blank');
+    
+    // ডাউনলোড কাউন্টার আপডেট (ডেমো)
+    const downloadBtn = document.querySelector('[onclick="downloadRoadmap()"]');
+    downloadBtn.innerHTML = '<i class="fas fa-check-circle text-xl mr-3"></i>ডাউনলোড শুরু হচ্ছে...';
+    downloadBtn.disabled = true;
+    
+    setTimeout(() => {
+        downloadBtn.innerHTML = '<i class="fas fa-download text-xl mr-3"></i>রোডম্যাপ ডাউনলোড করুন (PDF)<i class="fas fa-arrow-right ml-3"></i>';
+        downloadBtn.disabled = false;
+    }, 3000);
+}
+
+// টাইমার আপডেট শুরু
+const countdownInterval = setInterval(updateCountdown, 1000);
+updateCountdown(); // প্রথমবার রান
+
+// WhatsApp বাটনে ক্লিক ট্র্যাকিং
+document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+    link.addEventListener('click', function() {
+        // এখানে আপনি Analytics ট্র্যাকিং কোড যোগ করতে পারেন
+        console.log('WhatsApp এ ক্লিক করা হয়েছে:', this.href);
+    });
 });
     </script>
 
