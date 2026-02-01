@@ -65,6 +65,33 @@ html, body {
 .scale-up:hover {
     transform: scale(1.05);
 }
+
+
+
+.faq-question:hover {
+    background-color: #f8fafc;
+}
+
+.faq-answer {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FAQ item hover effect */
+.bg-gray-50:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
 	</style>
 	<!-- Bangla font -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -858,18 +885,206 @@ html, body {
                 </div>
                 </section>
 
-                <!-- Enroll Now Button for Mobile -->
-                <div class="mt-8 lg:hidden">
-                    <a href="https://wa.me/8801893255503" 
-                       class="block w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold py-4 px-6 rounded-xl text-center hover:shadow-xl transform transition hover:scale-[1.02] duration-300">
-                       <i class="fab fa-whatsapp text-xl mr-3"></i>
-                       WhatsApp এ এনরোল করুন
-                    </a>
-                </div>
+               
             </div>
         </div>
     </div> 
-    </div> </div> <footer class="mt-32 relative overflow-hidden w-full" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);">
+    </div> </div> 
+    
+    
+    
+    
+    <!-- FAQ Section -->
+<section id="faq" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <!-- Section Header -->
+        <div data-aos="fade-up" class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                প্রায়ই জিজ্ঞাসিত প্রশ্ন (FAQ)
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                কোর্স সম্পর্কে আপনার মনে থাকা সাধারণ প্রশ্নগুলোর উত্তর এখানে পাবেন
+            </p>
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="space-y-6">
+            <!-- FAQ 1 -->
+            <div data-aos="fade-up" data-aos-delay="100" class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 hover:border-indigo-300 transition-all duration-300">
+                <button onclick="toggleFAQ(1)" class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-gray-100 transition-colors">
+                    <span class="font-semibold text-lg text-gray-800">
+                        <span class="text-indigo-600 mr-2">Q.</span> আমার প্রোগ্রামিং এক্সপেরিয়েন্স নেই, তবুও কি আমি কোর্স করতে পারব?
+                    </span>
+                    <i id="icon-1" class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                </button>
+                <div id="answer-1" class="faq-answer px-6 py-4 border-t border-gray-200 hidden">
+                    <p class="text-gray-600 leading-relaxed">
+                        <span class="font-medium text-green-600">✓ হ্যাঁ, অবশ্যই!</span> এই কোর্সটি সম্পূর্ণভাবে জিরো থেকে ডিজাইন করা হয়েছে। প্রথম ২ সপ্তাহ আমরা বেসিক Python, Data Structure এবং OOP শেখাই। আপনি যদি মোটিভেটেড থাকেন এবং নিয়মিত প্র্যাকটিস করেন, আমরা গ্যারান্টি দিচ্ছি যে আপনি ৩ মাসের মধ্যে কনফিডেন্ট ML Developer হয়ে উঠবেন।
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div data-aos="fade-up" data-aos-delay="150" class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 hover:border-indigo-300 transition-all duration-300">
+                <button onclick="toggleFAQ(2)" class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-gray-100 transition-colors">
+                    <span class="font-semibold text-lg text-gray-800">
+                        <span class="text-indigo-600 mr-2">Q.</span> লাইভ ক্লাস মিস করলে কি করব?
+                    </span>
+                    <i id="icon-2" class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                </button>
+                <div id="answer-2" class="faq-answer px-6 py-4 border-t border-gray-200 hidden">
+                    <p class="text-gray-600 leading-relaxed">
+                        চিন্তার কোন কারণ নেই! প্রতিটি লাইভ ক্লাস রেকর্ড করা হয় এবং কোর্স ড্যাশবোর্ডে আপলোড করা হয়। আপনি যেকোনো সময় রেকর্ডেড ক্লাস দেখে নিতে পারবেন। এছাড়াও, সাপ্তাহিক Q&A সেশন রয়েছে যেখানে আপনি আপনার প্রশ্নগুলো করতে পারবেন। প্রোজেক্ট রিভিউ এবং এসাইনমেন্টেও আমাদের সাপোর্ট থাকবে।
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 hover:border-indigo-300 transition-all duration-300">
+                <button onclick="toggleFAQ(3)" class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-gray-100 transition-colors">
+                    <span class="font-semibold text-lg text-gray-800">
+                        <span class="text-indigo-600 mr-2">Q.</span> কোর্স শেষে কি ধরনের প্রজেক্ট করতে পারব?
+                    </span>
+                    <i id="icon-3" class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                </button>
+                <div id="answer-3" class="faq-answer px-6 py-4 border-t border-gray-200 hidden">
+                    <p class="text-gray-600 leading-relaxed">
+                        কোর্সের সময় আপনি ৫টি বাস্তব প্রজেক্ট সম্পন্ন করবেন:
+                        <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-600">
+                            <li>House Price Prediction (Regression)</li>
+                            <li>Customer Churn Prediction (Classification)</li>
+                            <li>Spam Email Detection (NLP)</li>
+                            <li>Customer Segmentation (Clustering)</li>
+                            <li>Final Capstone Project (Kaggle-style)</li>
+                        </ul>
+                        এই প্রজেক্টগুলো আপনার পোর্টফোলিওতে রাখতে পারবেন এবং জব ইন্টারভিউতে দেখাতে পারবেন।
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div data-aos="fade-up" data-aos-delay="250" class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 hover:border-indigo-300 transition-all duration-300">
+                <button onclick="toggleFAQ(4)" class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-gray-100 transition-colors">
+                    <span class="font-semibold text-lg text-gray-800">
+                        <span class="text-indigo-600 mr-2">Q.</span> সার্টিফিকেট কি internationally recognized?
+                    </span>
+                    <i id="icon-4" class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                </button>
+                <div id="answer-4" class="faq-answer px-6 py-4 border-t border-gray-200 hidden">
+                    <p class="text-gray-600 leading-relaxed">
+                        <span class="font-bold text-indigo-600">হ্যাঁ!</span> আমাদের সার্টিফিকেট:
+                        <br><br>
+                        <span class="inline-flex items-center bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">
+                            <i class="fas fa-check-circle mr-2"></i> LinkedIn Verified
+                        </span>
+                        <span class="inline-flex items-center bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">
+                            <i class="fas fa-check-circle mr-2"></i> Industry Recognized
+                        </span>
+                        <span class="inline-flex items-center bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">
+                            <i class="fas fa-check-circle mr-2"></i> Project Portfolio
+                        </span>
+                        <br><br>
+                        অনেকেই আমাদের সার্টিফিকেট ইউজ করে বিদেশের জব অথবা ফ্রিল্যান্সিং প্ল্যাটফর্মে তাদের প্রোফাইল এনহ্যান্স করেছে।
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 hover:border-indigo-300 transition-all duration-300">
+                <button onclick="toggleFAQ(5)" class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-gray-100 transition-colors">
+                    <span class="font-semibold text-lg text-gray-800">
+                        <span class="text-indigo-600 mr-2">Q.</span> পেমেন্ট প্ল্যান সম্পর্কে জানতে চাই
+                    </span>
+                    <i id="icon-5" class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                </button>
+                <div id="answer-5" class="faq-answer px-6 py-4 border-t border-gray-200 hidden">
+                    <div class="text-gray-600 space-y-3">
+                        <p>আমরা নিচের পেমেন্ট অপশনগুলো অফার করি:</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
+                            <div class="bg-white p-4 rounded-xl border border-green-200">
+                                <h4 class="font-bold text-green-700 mb-2">One-Time Payment</h4>
+                                <p class="text-sm">৳ ১৫,০০০ একবারে</p>
+                                <p class="text-xs text-green-600 mt-1">সর্বোচ্চ ২০% ডিসকাউন্ট</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-blue-200">
+                                <h4 class="font-bold text-blue-700 mb-2">ইন্সটলমেন্ট</h4>
+                                <p class="text-sm">৳ ৮,০০০ × ২ মাস</p>
+                                <p class="text-xs text-blue-600 mt-1">(মোট ৳ ১৬,০০০)</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-4">
+                            <i class="fas fa-phone-alt mr-2 text-indigo-600"></i> 
+                            পেমেন্ট সম্পর্কে বিস্তারিত জানতে কল করুন: <a href="tel:01893255503" class="font-bold text-indigo-600">01893-255503</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div data-aos="fade-up" data-aos-delay="350" class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 hover:border-indigo-300 transition-all duration-300">
+                <button onclick="toggleFAQ(6)" class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-gray-100 transition-colors">
+                    <span class="font-semibold text-lg text-gray-800">
+                        <span class="text-indigo-600 mr-2">Q.</span> কোর্স শেষে কি জব প্লেসমেন্ট সাপোর্ট পাব?
+                    </span>
+                    <i id="icon-6" class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                </button>
+                <div id="answer-6" class="faq-answer px-6 py-4 border-t border-gray-200 hidden">
+                    <div class="text-gray-600 space-y-4">
+                        <p>হ্যাঁ, আমরা কমপ্লিট ক্যারিয়ার সাপোর্ট দিই:</p>
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <i class="fas fa-file-alt text-green-600 mt-1 mr-3"></i>
+                                <span>CV/Resume তৈরি এবং অপটিমাইজেশন</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-comments text-blue-600 mt-1 mr-3"></i>
+                                <span>Mock Interview Sessions</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-briefcase text-purple-600 mt-1 mr-3"></i>
+                                <span>Job Referral System (আমাদের নেটওয়ার্কের মাধ্যমে)</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-globe text-indigo-600 mt-1 mr-3"></i>
+                                <span>Remote Job Application গাইডলাইন</span>
+                            </div>
+                        </div>
+                        <p class="text-sm bg-yellow-50 border-l-4 border-yellow-500 p-3 rounded">
+                            <i class="fas fa-lightbulb text-yellow-600 mr-2"></i>
+                            আমাদের ৭০%+ স্টুডেন্ট কোর্স শেষ করার ৩ মাসের মধ্যে ML-related জব বা ইন্টার্নশিপ পেয়েছেন।
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Still Have Questions -->
+        <div data-aos="fade-up" data-aos-delay="400" class="mt-16 text-center">
+            <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8 border border-indigo-100">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">এখনও প্রশ্ন আছে?</h3>
+                <p class="text-gray-600 mb-6">সরাসরি কথা বলে নিশ্চিত হোন</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/8801893255503" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl transition-colors duration-300 flex items-center justify-center">
+                        <i class="fab fa-whatsapp text-xl mr-3"></i>
+                        WhatsApp এ চ্যাট করুন
+                    </a>
+                    <a href="tel:01893255503" class="bg-white hover:bg-gray-50 text-gray-800 font-bold py-3 px-6 rounded-xl border border-gray-300 transition-colors duration-300 flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-3"></i>
+                        01893-255503
+                    </a>
+                </div>
+                <p class="text-sm text-gray-500 mt-4">
+                    <i class="fas fa-clock mr-2"></i>
+                    রিপ্লাই টাইম: সাধারণত ১ ঘন্টার মধ্যে
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    
+    <footer class="mt-32 relative overflow-hidden w-full" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);">
     <div class="absolute inset-0 overflow-hidden">
         <div class="absolute -top-40 -right-40 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
         <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse delay-1000"></div>
@@ -1015,6 +1230,48 @@ document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
         // এখানে আপনি Analytics ট্র্যাকিং কোড যোগ করতে পারেন
         console.log('WhatsApp এ ক্লিক করা হয়েছে:', this.href);
     });
+});
+
+
+
+// FAQ Toggle Function
+function toggleFAQ(num) {
+    const answer = document.getElementById('answer-' + num);
+    const icon = document.getElementById('icon-' + num);
+    
+    if (answer.classList.contains('hidden')) {
+        // Close all other FAQs
+        document.querySelectorAll('.faq-answer').forEach(item => {
+            if (item.id !== 'answer-' + num) {
+                item.classList.add('hidden');
+            }
+        });
+        
+        // Reset all other icons
+        document.querySelectorAll('.faq-question i').forEach(item => {
+            if (item.id !== 'icon-' + num) {
+                item.classList.remove('fa-chevron-up');
+                item.classList.add('fa-chevron-down');
+            }
+        });
+        
+        // Open current FAQ
+        answer.classList.remove('hidden');
+        icon.classList.remove('fa-chevron-down');
+        icon.classList.add('fa-chevron-up');
+    } else {
+        // Close current FAQ
+        answer.classList.add('hidden');
+        icon.classList.remove('fa-chevron-up');
+        icon.classList.add('fa-chevron-down');
+    }
+}
+
+// Initialize - Open first FAQ by default
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+        toggleFAQ(1);
+    }, 500);
 });
     </script>
 
