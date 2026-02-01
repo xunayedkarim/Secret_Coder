@@ -164,46 +164,47 @@ html, body {
 
 
 
-      <!-- টাইমার সেকশন -->
-        <div data-aos="fade-up" class="mb-16">
-            <div class="text-center mb-12">
-                <div class="inline-flex items-center justify-center space-x-4 mb-6">
-                    <span class="h-px w-20 bg-gradient-to-r from-transparent to-red-500"></span>
-                    <h1 class="text-red-600 tracking-widest text-sm font-medium uppercase">সীমিত সময় অফার</h1>
-                    <span class="h-px w-20 bg-gradient-to-r from-red-500 to-transparent"></span>
-                </div>
-                <h1 class="font-bold text-darken text-3xl lg:text-4xl mb-4">ভর্তি শেষ হবে</h1>
-                <p class="text-gray-600 max-w-2xl mx-auto">৩১ জানুয়ারি ২০২৬ এর পর ভর্তি বন্ধ থাকবে। Batch 4 এর ক্লাস শুরু হবে ১ February।</p>
-            </div>
+     <div data-aos="fade-up" class="mb-16">
+    <div class="text-center mb-12 px-4">
+        <div class="inline-flex items-center justify-center space-x-4 mb-6">
+            <span class="h-px w-20 bg-gradient-to-r from-transparent to-red-500"></span>
+            <h1 class="text-red-600 tracking-widest text-sm font-medium uppercase">স্পেশাল অফার</h1>
+            <span class="h-px w-20 bg-gradient-to-r from-red-500 to-transparent"></span>
+        </div>
+        <h1 class="font-bold text-darken text-3xl lg:text-4xl mb-4">অফারটির সময় বাকি আছে</h1>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+            এখনই এনরোল করুন এবং আপনার সুবিধামতো সময়ে ক্লাস শুরু করুন। <br class="hidden md:block"> 
+            <span class="font-bold text-indigo-600">৩১ মার্চ ২০২৬</span> পর্যন্ত এই বিশেষ ফি-তে ভর্তির সুযোগ থাকছে।
+        </p>
+    </div>
 
-            <!-- কাউন্টডাউন টাইমার -->
-            <div id="countdown-timer" class="flex justify-center space-x-2 sm:space-x-8 mb-8 px-2">
-    <div class="text-center">
-        <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-6 w-16 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center border border-gray-100">
-            <div id="days" class="text-xl sm:text-4xl font-bold text-red-600 leading-none">00</div>
-            <div class="text-[10px] sm:text-sm text-gray-500 mt-1 sm:mt-2">দিন</div>
+    <div id="countdown-timer" class="flex justify-center space-x-2 sm:space-x-8 mb-8 px-2">
+        <div class="text-center">
+            <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-6 w-16 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center border border-gray-100">
+                <div id="days" class="text-xl sm:text-4xl font-bold text-red-600 leading-none">00</div>
+                <div class="text-[10px] sm:text-sm text-gray-500 mt-1 sm:mt-2">দিন</div>
+            </div>
         </div>
-    </div>
-    <div class="text-center">
-        <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-6 w-16 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center border border-gray-100">
-            <div id="hours" class="text-xl sm:text-4xl font-bold text-red-600 leading-none">00</div>
-            <div class="text-[10px] sm:text-sm text-gray-500 mt-1 sm:mt-2">ঘণ্টা</div>
+        <div class="text-center">
+            <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-6 w-16 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center border border-gray-100">
+                <div id="hours" class="text-xl sm:text-4xl font-bold text-red-600 leading-none">00</div>
+                <div class="text-[10px] sm:text-sm text-gray-500 mt-1 sm:mt-2">ঘণ্টা</div>
+            </div>
         </div>
-    </div>
-    <div class="text-center">
-        <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-6 w-16 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center border border-gray-100">
-            <div id="minutes" class="text-xl sm:text-4xl font-bold text-red-600 leading-none">00</div>
-            <div class="text-[10px] sm:text-sm text-gray-500 mt-1 sm:mt-2">মিনিট</div>
+        <div class="text-center">
+            <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-6 w-16 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center border border-gray-100">
+                <div id="minutes" class="text-xl sm:text-4xl font-bold text-red-600 leading-none">00</div>
+                <div class="text-[10px] sm:text-sm text-gray-500 mt-1 sm:mt-2">মিনিট</div>
+            </div>
         </div>
-    </div>
-    <div class="text-center">
-        <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-6 w-16 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center border border-gray-100">
-            <div id="seconds" class="text-xl sm:text-4xl font-bold text-red-600 leading-none">00</div>
-            <div class="text-[10px] sm:text-sm text-gray-500 mt-1 sm:mt-2">সেকেন্ড</div>
+        <div class="text-center">
+            <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-6 w-16 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center border border-gray-100">
+                <div id="seconds" class="text-xl sm:text-4xl font-bold text-red-600 leading-none">00</div>
+                <div class="text-[10px] sm:text-sm text-gray-500 mt-1 sm:mt-2">সেকেন্ড</div>
+            </div>
         </div>
     </div>
 </div>
-           
 
 	<!-- container -->
 <div class="container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700">
