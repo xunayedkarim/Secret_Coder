@@ -1075,71 +1075,40 @@ document.getElementById('certificate-modal').addEventListener('click', function(
 
 
 
-// টার্গেট তারিখ: ৩১ মার্চ ২০২৬
-const targetDate = new Date('March 31, 2026 23:59:59').getTime();
-
-function updateCountdown() {
-    const now = new Date().getTime();
-    const timeLeft = targetDate - now;
-    
-    // সময় গণনা
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-    
-    // DOM আপডেট
-    document.getElementById('days').textContent = days.toString().padStart(2, '0');
-    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-    
-    // আসনের সংখ্যা ডাইনামিক আপডেট
-    const seatPercentage = Math.min(95, 85 + Math.floor((targetDate - now) / (1000 * 60 * 60 * 24)));
-    const remainingSeats = Math.max(5, 100 - seatPercentage);
-    
-    document.getElementById('seat-percentage').textContent = seatPercentage + '%';
-    document.getElementById('seat-progress').style.width = seatPercentage + '%';
-    document.getElementById('remaining-seats').textContent = remainingSeats;
-    
-    // সময় শেষ হলে
-    if (timeLeft < 0) {
-        clearInterval(countdownInterval);
-        document.getElementById('countdown-timer').innerHTML = 
-            '<div class="text-center p-8 bg-red-100 rounded-2xl"><h3 class="text-2xl font-bold text-red-700">ভর্তি বন্ধ!</h3><p class="text-red-600">পরবর্তী ব্যাচের জন্য অপেক্ষা করুন</p></div>';
-    }
-}
-
-// রোডম্যাপ PDF ডাউনলোড ফাংশন
-function downloadRoadmap() {
-    // WhatsApp এ রিডাইরেক্ট করবে PDF লিঙ্কের জন্য
-    //window.open('https://wa.me/8801893255503?text=রোডম্যাপ%20PDF%20টি%20পেতে%20চাই', '_blank');
-    
-    // অথবা সরাসরি PDF ডাউনলোড
-     window.open('machine-learning-roadmap-v2.pdf', '_blank');
-    
-    // ডাউনলোড কাউন্টার আপডেট (ডেমো)
-    const downloadBtn = document.querySelector('[onclick="downloadRoadmap()"]');
-    downloadBtn.innerHTML = '<i class="fas fa-check-circle text-xl mr-3"></i>ডাউনলোড শুরু হচ্ছে...';
-    downloadBtn.disabled = true;
-    
-    setTimeout(() => {
-        downloadBtn.innerHTML = '<i class="fas fa-download text-xl mr-3"></i>রোডম্যাপ ডাউনলোড করুন (PDF)<i class="fas fa-arrow-right ml-3"></i>';
-        downloadBtn.disabled = false;
-    }, 3000);
-}
-
-// টাইমার আপডেট শুরু
-const countdownInterval = setInterval(updateCountdown, 1000);
-updateCountdown(); // প্রথমবার রান
-
-// WhatsApp বাটনে ক্লিক ট্র্যাকিং
-document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
-    link.addEventListener('click', function() {
-        // এখানে আপনি Analytics ট্র্যাকিং কোড যোগ করতে পারেন
-        console.log('WhatsApp এ ক্লিক করা হয়েছে:', this.href);
+    // Wait for DOM to load completely
+    document.addEventListener('DOMContentLoaded', function() {
+        // Target date: March 31, 2026 23:59:59
+        const targetDate = new Date('March 31, 2026 23:59:59').getTime();
+        
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = targetDate - now;
+            
+            if (timeLeft < 0) {
+                clearInterval(timerInterval);
+                document.getElementById('countdown-timer').innerHTML = 
+                    '<div class="text-center p-4 bg-red-100 rounded-lg"><h3 class="text-xl font-bold text-red-700">অফার শেষ!</h3></div>';
+                return;
+            }
+            
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            
+            // Update elements
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        // Initial update
+        updateCountdown();
+        
+        // Update every second
+        const timerInterval = setInterval(updateCountdown, 1000);
     });
-});
     </script>
 
 	
