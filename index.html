@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -91,10 +89,15 @@ html, body {
                 </button>
             </div>
             <nav :class="{ 'transform md:transform-none': !open, 'h-full': open }" class="h-0 md:h-auto flex flex-col flex-grow md:items-center pb-4 md:pb-0 md:flex md:justify-end md:flex-row origin-top duration-300 scale-y-0">
-                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="#">হোম</a>
-                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="#">কারিকুলাম</a>
-                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="#">সাফল্যের গল্প</a>
-                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="#">আমাদের সম্পর্কে</a>
+<a href="#overview" class="px-4 py-2 mt-2 text-sm rounded-lg md:mt-8 md:ml-4 hover:text-indigo-600 transition">কোর্স</a>
+
+<a href="#skills" class="px-4 py-2 mt-2 text-sm rounded-lg md:mt-8 md:ml-4 hover:text-indigo-600 transition">কি শিখবেন</a>
+
+
+<a href="#mentor" class="px-4 py-2 mt-2 text-sm rounded-lg md:mt-8 md:ml-4 hover:text-indigo-600 transition">মেন্টর</a>
+
+<a href="#faq" class="px-4 py-2 mt-2 text-sm rounded-lg md:mt-8 md:ml-4 hover:text-indigo-600 transition">FAQ</a>
+
                 <a class="px-10 py-3 mt-2 text-sm text-center bg-white text-gray-800 rounded-full md:mt-8 md:ml-4" href="#">লগইন</a>
                 <a class="px-10 py-3 mt-2 text-sm text-center bg-red-500 text-white rounded-full md:mt-8 md:ml-4" href="https://forms.gle/1e1hec2U2U5HJRdK9">এখনই ভর্তি হোন</a>
             </nav>
@@ -200,6 +203,8 @@ html, body {
 
 
 <!-- কোর্স ফিচার -->
+ <section id="overview" class="py-20">
+
 		<div data-aos="flip-up" class="max-w-xl mx-auto text-center mt-24">
 			<h1 class="font-bold text-darken my-3 text-2xl">আপনি যা পাবেন</h1>
 			<p class="leading-relaxed text-gray-500">পুরো কোর্সে যা যা অন্তর্ভুক্ত আছে</p>
@@ -257,7 +262,8 @@ html, body {
 		
 
 
-	
+	</section>
+
 		
 		
 <div class="mt-28">
@@ -352,7 +358,7 @@ html, body {
 
      
 
-<section class="py-24 bg-[#fafafa] overflow-hidden">
+<section id="mentor" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid lg:grid-cols-12 gap-16 items-center">
             
@@ -553,6 +559,8 @@ html, body {
 
 
         <!-- কোর্স সারাংশ -->
+         <section id="skills" class="py-20 bg-gray-50">
+
 <div class="mt-16">
     <!-- Header -->
     <div data-aos="fade-up" class="text-center mb-12">
@@ -848,7 +856,8 @@ html, body {
                         </div>
                     </div>
                 </div>
-                
+                </section>
+
                 <!-- Enroll Now Button for Mobile -->
                 <div class="mt-8 lg:hidden">
                     <a href="https://wa.me/8801893255503" 
