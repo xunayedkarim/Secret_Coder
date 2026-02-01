@@ -1017,100 +1017,139 @@ html, body {
 	<!-- Font Awesome for icons -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 	
-	<!-- AOS init -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-    	AOS.init({
-        disableMutationObserver: false,
-        offset: 120,
-        delay: 0,
-        duration: 400,
-        easing: 'ease',
-        once: true,
-        mirror: false,
-        anchorPlacement: 'top-bottom',
-        // এটিই মূল সমাধান:
-        startEvent: 'DOMContentLoaded',
-    });
-
-
-
-    // সার্টিফিকেট জুম ফাংশন
-function zoomCertificate() {
-    const modal = document.getElementById('certificate-modal');
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
-    document.body.style.overflow = 'hidden';
-}
-
-// সার্টিফিকেট বন্ধ করার ফাংশন
-function closeCertificate() {
-    const modal = document.getElementById('certificate-modal');
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
-    document.body.style.overflow = 'auto';
-}
-
-// ডেমো ডাউনলোড ফাংশন
-function downloadDemo() {
-    alert('ডেমো সার্টিফিকেট ডাউনলোড লিঙ্ক প্রস্তুত!\n\nআসল সার্টিফিকেট কোর্স সম্পন্ন করলে পাবেন।');
-    // আসলে ডাউনলোড করার জন্য:
-    // window.open('path/to/certificate-sample.pdf', '_blank');
-}
-
-// ESC কী প্রেসে মডেল বন্ধ হবে
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        closeCertificate();
-    }
-});
-
-// মডেলের বাইরে ক্লিক করলে বন্ধ হবে
-document.getElementById('certificate-modal').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closeCertificate();
-    }
-});
-
-
-
-
-    // Wait for DOM to load completely
+	<script>
+    // AOS initialization - প্রথমে AOS শুরু করুন
     document.addEventListener('DOMContentLoaded', function() {
-        // Target date: March 31, 2026 23:59:59
-        const targetDate = new Date('March 31, 2026 23:59:59').getTime();
+        AOS.init({
+            disableMutationObserver: false,
+            offset: 120,
+            delay: 0,
+            duration: 400,
+            easing: 'ease',
+            once: true,
+            mirror: false,
+            anchorPlacement: 'top-bottom',
+            startEvent: 'DOMContentLoaded',
+        });
         
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const timeLeft = targetDate - now;
+        // Countdown Timer ফাংশন
+        function startCountdown() {
+            // টার্গেট তারিখ: ৩১ মার্চ ২০২৬ ২৩:৫৯:৫৯
+            const targetDate = new Date('March 31, 2026 23:59:59').getTime();
             
-            if (timeLeft < 0) {
-                clearInterval(timerInterval);
-                document.getElementById('countdown-timer').innerHTML = 
-                    '<div class="text-center p-4 bg-red-100 rounded-lg"><h3 class="text-xl font-bold text-red-700">অফার শেষ!</h3></div>';
+            // DOM এলিমেন্টগুলো সংরক্ষণ করুন
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+            
+            // এলিমেন্টগুলো পাওয়া গেছে কিনা চেক করুন
+            if (!daysEl || !hoursEl || !minutesEl || !secondsEl) {
+                console.error('Countdown elements not found!');
                 return;
             }
             
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            console.log('Countdown timer started...');
             
-            // Update elements
-            document.getElementById('days').textContent = days.toString().padStart(2, '0');
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const timeLeft = targetDate - now;
+                
+                // সময় শেষ হয়ে গেলে
+                if (timeLeft < 0) {
+                    clearInterval(timerInterval);
+                    daysEl.textContent = '00';
+                    hoursEl.textContent = '00';
+                    minutesEl.textContent = '00';
+                    secondsEl.textContent = '00';
+                    
+                    // Optional: একটি বার্তা দেখাতে পারেন
+                    // document.getElementById('countdown-timer').innerHTML = 
+                    //     '<div class="text-center p-4 bg-red-100 rounded-lg"><h3 class="text-xl font-bold text-red-700">অফার শেষ!</h3></div>';
+                    return;
+                }
+                
+                // সময় গণনা
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                
+                // DOM আপডেট
+                daysEl.textContent = days.toString().padStart(2, '0');
+                hoursEl.textContent = hours.toString().padStart(2, '0');
+                minutesEl.textContent = minutes.toString().padStart(2, '0');
+                secondsEl.textContent = seconds.toString().padStart(2, '0');
+            }
+            
+            // প্রথমবার আপডেট
+            updateCountdown();
+            
+            // প্রতি সেকেন্ডে আপডেট
+            const timerInterval = setInterval(updateCountdown, 1000);
         }
         
-        // Initial update
-        updateCountdown();
+        // Countdown শুরু করুন
+        startCountdown();
         
-        // Update every second
-        const timerInterval = setInterval(updateCountdown, 1000);
-    });
-    </script>
+        // সার্টিফিকেট সম্পর্কিত ফাংশনগুলো
+        function zoomCertificate() {
+            const modal = document.getElementById('certificate-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
 
+        function closeCertificate() {
+            const modal = document.getElementById('certificate-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        function downloadDemo() {
+            alert('ডেমো সার্টিফিকেট ডাউনলোড লিঙ্ক প্রস্তুত!\n\nআসল সার্টিফিকেট কোর্স সম্পন্ন করলে পাবেন।');
+        }
+
+        // ESC কী প্রেসে মডেল বন্ধ হবে
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeCertificate();
+            }
+        });
+
+        // মডেলের বাইরে ক্লিক করলে বন্ধ হবে
+        const modal = document.getElementById('certificate-modal');
+        if (modal) {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeCertificate();
+                }
+            });
+        }
+    });
+    
+    // রোডম্যাপ ডাউনলোড ফাংশন (ডিফল্টভাবে ডিফাইন করা)
+    function downloadRoadmap() {
+        // WhatsApp এ রিডাইরেক্ট করবে PDF লিঙ্কের জন্য
+        window.open('https://wa.me/8801893255503?text=রোডম্যাপ%20PDF%20টি%20পেতে%20চাই', '_blank');
+        
+        // অথবা সরাসরি PDF ডাউনলোড
+        // window.open('machine-learning-roadmap-v2.pdf', '_blank');
+        
+        // ডাউনলোড কাউন্টার আপডেট (ডেমো)
+        const downloadBtn = document.querySelector('[onclick="downloadRoadmap()"]');
+        if (downloadBtn) {
+            downloadBtn.innerHTML = '<i class="fas fa-check-circle text-xl mr-3"></i>ডাউনলোড শুরু হচ্ছে...';
+            downloadBtn.disabled = true;
+            
+            setTimeout(() => {
+                downloadBtn.innerHTML = '<i class="fas fa-download text-xl mr-3"></i>রোডম্যাপ ডাউনলোড করুন (PDF)<i class="fas fa-arrow-right ml-3"></i>';
+                downloadBtn.disabled = false;
+            }, 3000);
+        }
+    }
+</script>
 	
 </body>
 </html>
