@@ -177,47 +177,6 @@ html, body {
 
 
 
-     <div data-aos="fade-up" class="mb-16">
-    <div class="text-center mb-12 px-4">
-        <div class="inline-flex items-center justify-center space-x-4 mb-6">
-            <span class="h-px w-20 bg-gradient-to-r from-transparent to-red-500"></span>
-            <h1 class="text-red-600 tracking-widest text-sm font-medium uppercase">স্পেশাল অফার</h1>
-            <span class="h-px w-20 bg-gradient-to-r from-red-500 to-transparent"></span>
-        </div>
-        <h1 class="font-bold text-darken text-3xl lg:text-4xl mb-4">অফারটির সময় বাকি আছে</h1>
-        <p class="text-gray-600 max-w-2xl mx-auto">
-            এখনই এনরোল করুন এবং আপনার সুবিধামতো সময়ে ক্লাস শুরু করুন। <br class="hidden md:block"> 
-            <span class="font-bold text-indigo-600">৩১ মার্চ ২০২৬</span> পর্যন্ত এই বিশেষ ফি-তে ভর্তির সুযোগ থাকছে।
-        </p>
-    </div>
-
-    <div id="countdown-timer" class="flex justify-center space-x-2 sm:space-x-8 mb-8 px-2">
-        <div class="text-center">
-            <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-6 w-16 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center border border-gray-100">
-                <div id="days" class="text-xl sm:text-4xl font-bold text-red-600 leading-none">00</div>
-                <div class="text-[10px] sm:text-sm text-gray-500 mt-1 sm:mt-2">দিন</div>
-            </div>
-        </div>
-        <div class="text-center">
-            <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-6 w-16 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center border border-gray-100">
-                <div id="hours" class="text-xl sm:text-4xl font-bold text-red-600 leading-none">00</div>
-                <div class="text-[10px] sm:text-sm text-gray-500 mt-1 sm:mt-2">ঘণ্টা</div>
-            </div>
-        </div>
-        <div class="text-center">
-            <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-6 w-16 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center border border-gray-100">
-                <div id="minutes" class="text-xl sm:text-4xl font-bold text-red-600 leading-none">00</div>
-                <div class="text-[10px] sm:text-sm text-gray-500 mt-1 sm:mt-2">মিনিট</div>
-            </div>
-        </div>
-        <div class="text-center">
-            <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-6 w-16 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center border border-gray-100">
-                <div id="seconds" class="text-xl sm:text-4xl font-bold text-red-600 leading-none">00</div>
-                <div class="text-[10px] sm:text-sm text-gray-500 mt-1 sm:mt-2">সেকেন্ড</div>
-            </div>
-        </div>
-    </div>
-</div>
 
 	<!-- container -->
 <div class="container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700">
@@ -1036,80 +995,10 @@ html, body {
 
 
 
-    // সার্টিফিকেট জুম ফাংশন
-function zoomCertificate() {
-    const modal = document.getElementById('certificate-modal');
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
-    document.body.style.overflow = 'hidden';
-}
-
-// সার্টিফিকেট বন্ধ করার ফাংশন
-function closeCertificate() {
-    const modal = document.getElementById('certificate-modal');
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
-    document.body.style.overflow = 'auto';
-}
-
-// ডেমো ডাউনলোড ফাংশন
-function downloadDemo() {
-    alert('ডেমো সার্টিফিকেট ডাউনলোড লিঙ্ক প্রস্তুত!\n\nআসল সার্টিফিকেট কোর্স সম্পন্ন করলে পাবেন।');
-    // আসলে ডাউনলোড করার জন্য:
-    // window.open('path/to/certificate-sample.pdf', '_blank');
-}
-
-// ESC কী প্রেসে মডেল বন্ধ হবে
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        closeCertificate();
-    }
-});
-
-// মডেলের বাইরে ক্লিক করলে বন্ধ হবে
-document.getElementById('certificate-modal').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closeCertificate();
-    }
-});
 
 
 
 
-// টার্গেট তারিখ: ৩১ মার্চ ২০২৬
-const targetDate = new Date('March 31, 2026 23:59:59').getTime();
-
-function updateCountdown() {
-    const now = new Date().getTime();
-    const timeLeft = targetDate - now;
-    
-    // সময় গণনা
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-    
-    // DOM আপডেট
-    document.getElementById('days').textContent = days.toString().padStart(2, '0');
-    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-    
-    // আসনের সংখ্যা ডাইনামিক আপডেট
-    const seatPercentage = Math.min(95, 85 + Math.floor((targetDate - now) / (1000 * 60 * 60 * 24)));
-    const remainingSeats = Math.max(5, 100 - seatPercentage);
-    
-    document.getElementById('seat-percentage').textContent = seatPercentage + '%';
-    document.getElementById('seat-progress').style.width = seatPercentage + '%';
-    document.getElementById('remaining-seats').textContent = remainingSeats;
-    
-    // সময় শেষ হলে
-    if (timeLeft < 0) {
-        clearInterval(countdownInterval);
-        document.getElementById('countdown-timer').innerHTML = 
-            '<div class="text-center p-8 bg-red-100 rounded-2xl"><h3 class="text-2xl font-bold text-red-700">ভর্তি বন্ধ!</h3><p class="text-red-600">পরবর্তী ব্যাচের জন্য অপেক্ষা করুন</p></div>';
-    }
-}
 
 // রোডম্যাপ PDF ডাউনলোড ফাংশন
 function downloadRoadmap() {
