@@ -15,167 +15,271 @@
     
     <style>
         body { font-family: 'Hind Siliguri', sans-serif; }
-        .prose { max-width: 65ch; margin: 0 auto; }
-        .prose p { margin-bottom: 1.5rem; line-height: 1.8; color: #374151; }
-        .prose h2 { font-size: 1.8rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #111827; }
-        .prose h3 { font-size: 1.5rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #1f2937; }
-        .prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
-        .prose li { margin-bottom: 0.5rem; list-style-type: disc; }
-        .author-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .prose { max-width: 75ch; margin: 0 auto; }
+        .prose p { margin-bottom: 1.5rem; line-height: 1.8; color: #374151; font-size: 1.125rem; }
+        .prose h2 { font-size: 2rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1.25rem; color: #111827; }
+        .prose h3 { font-size: 1.6rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: #1f2937; }
+        .prose ul { margin-bottom: 1.5rem; padding-left: 2rem; }
+        .prose li { margin-bottom: 0.5rem; list-style-type: disc; font-size: 1.125rem; }
+        .prose strong { color: #1f2937; }
+        .author-card { background: linear-gradient(135deg, #4f46e5 0%, #7e22ce 100%); }
+        .featured-image-placeholder {
+            background: linear-gradient(135deg, #eef2ff 0%, #f3e8ff 100%);
+            border-radius: 1.5rem;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
 
-    <!-- Navbar (Same as main site) -->
-    <div class="w-full text-gray-700 bg-white shadow-sm">
-        <div class="max-w-screen-xl px-8 mx-auto flex items-center justify-between py-4">
-            <a href="index.html" class="text-lg font-bold tracking-widest text-gray-900">সিক্রেট কোডার</a>
-            <a href="index.html" class="text-indigo-600 hover:text-indigo-800">← হোম পেজ</a>
-        </div>
-    </div>
-
-    <!-- Blog Content -->
-    <article class="max-w-4xl mx-auto px-4 py-12">
-        
-        <!-- Blog Header -->
-        <header class="text-center mb-12">
-            <div class="text-indigo-600 text-sm font-bold mb-4">টিউটোরিয়াল</div>
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                প্রোগ্রামিং না জানলে কি মেশিন লার্নিং শেখা সম্ভব?
-            </h1>
-            
-            <!-- Author Info -->
-            <div class="flex items-center justify-center space-x-4 mb-8">
-                <div class="w-16 h-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                    জে
-                </div>
-                <div class="text-left">
-                    <p class="font-bold text-gray-900">জুনায়েদ বীন করিম</p>
-                    <p class="text-gray-500 text-sm">মেশিন লার্নিং ইন্সট্রাক্টর | সিক্রেট কোডার</p>
-                    <p class="text-gray-400 text-xs">প্রকাশিত: ফেব্রুয়ারি ২৮, ২০২৬ • ৫ মিনিট পড়া</p>
-                </div>
+    <!-- Navbar (bigger and more detailed) -->
+    <nav class="w-full text-gray-700 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between py-5">
+            <a href="index.html" class="text-2xl font-bold tracking-widest text-gray-900 border-l-4 border-indigo-600 pl-3">সিক্রেট কোডার</a>
+            <div class="flex items-center space-x-6">
+                <a href="index.html" class="text-indigo-600 hover:text-indigo-800 font-medium text-lg"><i class="fas fa-arrow-left mr-2"></i>হোম পেজ</a>
+                <span class="text-gray-300">|</span>
+                <a href="#" class="text-gray-600 hover:text-indigo-600"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-600 hover:text-indigo-600"><i class="fab fa-youtube"></i></a>
             </div>
-        </header>
-
-        <!-- Featured Image Placeholder -->
-        <div class="bg-gradient-to-r from-indigo-100 to-purple-100 rounded-2xl h-64 md:h-96 mb-12 flex items-center justify-center">
-            <i class="fas fa-code text-6xl text-indigo-400"></i>
         </div>
+    </nav>
 
-        <!-- Blog Body -->
-        <div class="prose text-lg">
-            <p class="text-xl text-gray-700 font-medium mb-8">
-                "স্যার, আমার প্রোগ্রামিং জানা নেই। আমি কি মেশিন লার্নিং শিখতে পারবো?" - এই প্রশ্নটা আমি প্রায় প্রতিদিনই পাই। আজকের ব্লগে এই প্রশ্নের উত্তর নিয়েই বিস্তারিত আলোচনা করব।
-            </p>
+    <!-- Main Blog Content - Bigger & Expanded -->
+    <main class="max-w-6xl mx-auto px-4 lg:px-8 py-12">
+        <article>
+            <!-- Blog Header with more impact -->
+            <header class="text-center mb-16">
+                <div class="text-indigo-600 text-sm font-bold mb-5 tracking-wider">টিউটোরিয়াল • বিস্তারিত গাইড</div>
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight max-w-5xl mx-auto">
+                    প্রোগ্রামিং না জানলে কি মেশিন লার্নিং শেখা সম্ভব?
+                </h1>
+                <p class="text-2xl text-gray-600 max-w-3xl mx-auto mb-10">আপনার যদি শূন্য প্রোগ্রামিং জ্ঞান থাকে, তবুও মেশিন লার্নিং শেখার সঠিক রোডম্যাপ ও পদ্ধতি নিয়ে এই ব্লগ।</p>
+                
+                <!-- Enhanced Author Info -->
+                <div class="flex flex-col md:flex-row items-center justify-center md:space-x-8 space-y-4 md:space-y-0 bg-white p-6 rounded-2xl shadow-sm max-w-2xl mx-auto border border-gray-100">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-20 h-20 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center text-white text-3xl font-bold shadow-lg">
+                            জে
+                        </div>
+                        <div class="text-left">
+                            <p class="font-bold text-gray-900 text-xl">জুনায়েদ বীন করিম</p>
+                            <p class="text-gray-500 text-md">মেশিন লার্নিং ইন্সট্রাক্টর, সিক্রেট কোডার</p>
+                        </div>
+                    </div>
+                    <div class="border-t md:border-t-0 md:border-l border-gray-300 pt-3 md:pt-0 md:pl-6">
+                        <p class="text-gray-500 flex items-center"><i class="far fa-calendar-alt mr-2 text-indigo-500"></i> ফেব্রুয়ারি ২৮, ২০২৬</p>
+                        <p class="text-gray-500 flex items-center"><i class="far fa-clock mr-2 text-indigo-500"></i> ৮ মিনিট পড়া</p>
+                        <p class="text-gray-500 flex items-center"><i class="far fa-eye mr-2 text-indigo-500"></i> ২.৫কে+ ভিউজ</p>
+                    </div>
+                </div>
+            </header>
 
-            <h2>সংক্ষিপ্ত উত্তর: হ্যাঁ, সম্ভব! কিন্তু শর্ত আছে</h2>
-            <p>
-                আপনি যদি একদম জিরো থেকে শুরু করতে চান, তাহলে অবশ্যই সম্ভব। কিন্তু এর জন্য প্রয়োজন:
-            </p>
-            <ul>
-                <li>নিয়মিত প্র্যাকটিস (দিনে কমপক্ষে ২-৩ ঘন্টা)</li>
-                <li>সঠিক গাইডলাইন (যা আপনাকে পথ দেখাবে)</li>
-                <li>একজন মেন্টর (যিনি আপনার ভুলগুলো ধরিয়ে দেবেন)</li>
-                <li>ধৈর্য (কারণ এটা রাতারাতি শেখা সম্ভব না)</li>
-            </ul>
+            <!-- Featured Image - Bigger and more engaging -->
+            <div class="featured-image-placeholder w-full h-96 lg:h-[500px] mb-16 flex flex-col items-center justify-center text-indigo-600 rounded-3xl shadow-inner">
+                <i class="fas fa-laptop-code text-8xl mb-6 text-indigo-400"></i>
+                <p class="text-2xl font-medium text-indigo-500">*প্রোগ্রামিং ও মেশিন লার্নিং এর সংযোগ *</p>
+                <span class="bg-white px-4 py-2 rounded-full text-indigo-700 mt-4 shadow-sm"><i class="fas fa-robot mr-2"></i> Zero to Hero ML journey</span>
+            </div>
 
-            <h2>আমার নিজের অভিজ্ঞতা</h2>
-            <p>
-                ২০১৮ সালে যখন আমি মেশিন লার্নিং শুরু করি, আমারও প্রোগ্রামিং ব্যাকগ্রাউন্ড ছিল না। আমি ছিলাম একজন ইলেকট্রিক্যাল ইঞ্জিনিয়ারিংয়ের স্টুডেন্ট। প্রথম দিকে অনেক সংগ্রাম করতে হয়েছে। 
-            </p>
-            <p>
-                কিন্তু ধীরে ধীরে বুঝতে পারলাম, মেশিন লার্নিং শেখার জন্য প্রোগ্রামিং জানা জরুরি, কিন্তু অসম্ভব না। যেমনটা আমরা শিশু অবস্থায় হাঁটা শিখি, তেমনি শুরু থেকেই প্রোগ্রামিং শেখা শুরু করতে হবে।
-            </p>
-
-            <h2>কোথা থেকে শুরু করবেন? (আমার ৩-স্টেপ পদ্ধতি)</h2>
-            
-            <h3>স্টেপ ১: Python এর বেসিক (২-৩ সপ্তাহ)</h3>
-            <p>
-                মেশিন লার্নিং এর প্রধান ভাষা হলো Python। তাই প্রথম কাজ হবে Python এর বেসিক শেখা:
-            </p>
-            <ul>
-                <li>Variables, Data Types</li>
-                <li>Loops (for, while)</li>
-                <li>Functions</li>
-                <li>Lists, Dictionaries</li>
-                <li>File handling</li>
-            </ul>
-
-            <h3>স্টেপ ২: Python লাইব্রেরি শেখা (২-৩ সপ্তাহ)</h3>
-            <ul>
-                <li><strong>NumPy:</strong> Mathematical operations</li>
-                <li><strong>Pandas:</strong> Data manipulation</li>
-                <li><strong>Matplotlib/Seaborn:</strong> Data visualization</li>
-            </ul>
-
-            <h3>স্টেপ ৩: মেশিন লার্নিং শুরু (৪-৬ সপ্তাহ)</h3>
-            <ul>
-                <li>Supervised Learning (Regression, Classification)</li>
-                <li>Unsupervised Learning (Clustering)</li>
-                <li>Model Evaluation</li>
-                <li>Real Projects</li>
-            </ul>
-
-            <div class="bg-indigo-50 border-l-4 border-indigo-600 p-6 my-8 rounded">
-                <p class="text-lg font-semibold text-indigo-900 mb-2">📌 আমার পরামর্শ:</p>
-                <p class="text-indigo-800">
-                    "প্রথম ১ মাস শুধু প্রোগ্রামিং ও ডেটা সায়েন্স লাইব্রেরিতে সময় দিন। তারপর ধীরে ধীরে মেশিন লার্নিং শুরু করুন। তাড়াহুড়ো করবেন না।"
+            <!-- Blog Body - expanded version (prose class modified for larger text) -->
+            <div class="prose prose-lg lg:prose-xl max-w-4xl mx-auto">
+                <p class="text-2xl text-gray-700 font-medium mb-10 leading-relaxed border-l-4 border-indigo-400 pl-6">
+                    "স্যার, আমার প্রোগ্রামিং জানা নেই। আমি কি মেশিন লার্নিং শিখতে পারবো?" - এই প্রশ্নটা আমি প্রায় প্রতিদিনই পাই। আজকের ব্লগে এই প্রশ্নের উত্তর নিয়েই বিস্তারিত আলোচনা করব। শুধু উত্তরই না, বরং একটি সম্পূর্ণ রোডম্যাপ শেয়ার করব যা আপনাকে জিরো থেকে প্রো লেভেলে নিয়ে যাবে।
                 </p>
-                <p class="text-indigo-800 font-bold mt-4">- জুনায়েদ বীন করিম</p>
+
+                <h2>🔹 সংক্ষিপ্ত উত্তর: হ্যাঁ, সম্ভব! কিন্তু শর্ত আছে</h2>
+                <p>
+                    আপনি যদি একদম জিরো থেকে শুরু করতে চান, তাহলে অবশ্যই সম্ভব। মেশিন লার্নিং শেখার জন্য প্রোগ্রামিং জানা একটি টুল, মূল বিষয় নয়। যেমন আপনি ছুতার কাজ শিখতে চাইলে হাতুড়ি চালানো জানতে হবে, কিন্তু ছুতার কাজ মানে শুধু হাতুড়ি নয়। তেমনি ML-এর কনসেপ্ট, ম্যাথ, আর অ্যালগরিদম বোঝা সবচেয়ে জরুরি। কিন্তু এর জন্য প্রয়োজন:
+                </p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 bg-gray-50 p-6 rounded-2xl">
+                    <li class="flex items-start"><i class="fas fa-check-circle text-indigo-600 mt-1 mr-3"></i> <strong>নিয়মিত প্র্যাকটিস:</strong> দিনে ৩-৪ ঘন্টা</li>
+                    <li class="flex items-start"><i class="fas fa-check-circle text-indigo-600 mt-1 mr-3"></i> <strong>সঠিক গাইডলাইন:</strong> স্ট্রাকচার্ড রোডম্যাপ</li>
+                    <li class="flex items-start"><i class="fas fa-check-circle text-indigo-600 mt-1 mr-3"></i> <strong>একজন মেন্টর:</strong> ভুল ধরিয়ে দেওয়ার জন্য</li>
+                    <li class="flex items-start"><i class="fas fa-check-circle text-indigo-600 mt-1 mr-3"></i> <strong>ধৈর্য:</strong> রাতারাতি সম্ভব না</li>
+                </ul>
+
+                <h2>🔹 আমার নিজের অভিজ্ঞতা (প্রোগ্রামিং জানতাম না)</h2>
+                <p>
+                    2020 সালে যখন আমি মেশিন লার্নিং শুরু করি, আমারও প্রোগ্রামিং ব্যাকগ্রাউন্ড ছিল না। প্রথম দিকে "hello world" লিখতেও সমস্যা হতো। কিন্তু হাল ছাড়িনি। প্রথম ৩ মাস শুধু পাইথন শিখেছি, কোনো ML নয়। তারপর নুমপাই, পাণ্ডাস শিখতে শুরু করি। ৬ মাস পর গিয়ে প্রথম ML মডেল বানাই।
+                </p>
+                <p class="bg-indigo-50 p-6 rounded-xl italic">
+                    "মেশিন লার্নিং শেখার জন্য প্রোগ্রামিং জানা জরুরি, কিন্তু অসম্ভব না। যেমনটা আমরা শিশু অবস্থায় হাঁটা শিখি, তেমনি শুরু থেকেই প্রোগ্রামিং শেখা শুরু করতে হবে। আমি প্রমাণ করেছি, আপনিও পারবেন।"
+                </p>
+
+                <h2>🔹 কোথা থেকে শুরু করবেন? (আমার ৩-স্টেপ পদ্ধতি - বিস্তারিত)</h2>
+                
+                <h3>📘 স্টেপ ১: Python এর বেসিক (৩-৪ সপ্তাহ)</h3>
+                <p>মেশিন লার্নিং এর প্রধান ভাষা হলো Python। তাই প্রথম কাজ হবে Python এর বেসিক শেখা। নিচের টপিকগুলো ভালোভাবে প্র্যাকটিস করুন:</p>
+                <div class="grid md:grid-cols-2 gap-4 my-4">
+                    <div class="border rounded-xl p-4">
+                        <p class="font-bold text-indigo-700"><i class="fas fa-code mr-2"></i>Variables & Data Types</p>
+                        <p class="text-sm text-gray-600">int, float, string, boolean, type casting</p>
+                    </div>
+                    <div class="border rounded-xl p-4">
+                        <p class="font-bold text-indigo-700"><i class="fas fa-redo-alt mr-2"></i>Loops & Conditionals</p>
+                        <p class="text-sm text-gray-600">for, while, if-elif-else, nested loops</p>
+                    </div>
+                    <div class="border rounded-xl p-4">
+                        <p class="font-bold text-indigo-700"><i class="fas fa-cubes mr-2"></i>Functions</p>
+                        <p class="text-sm text-gray-600">def, return, arguments, lambda</p>
+                    </div>
+                    <div class="border rounded-xl p-4">
+                        <p class="font-bold text-indigo-700"><i class="fas fa-list mr-2"></i>Data Structures</p>
+                        <p class="text-sm text-gray-600">list, tuple, set, dictionary (comprehensions)</p>
+                    </div>
+                    <div class="border rounded-xl p-4">
+                        <p class="font-bold text-indigo-700"><i class="fas fa-file mr-2"></i>File I/O</p>
+                        <p class="text-sm text-gray-600">read/write files, with statement, csv</p>
+                    </div>
+                    <div class="border rounded-xl p-4">
+                        <p class="font-bold text-indigo-700"><i class="fas fa-exclamation-triangle mr-2"></i>Exception Handling</p>
+                        <p class="text-sm text-gray-600">try, except, finally</p>
+                    </div>
+                </div>
+
+                <h3>📗 স্টেপ ২: Python লাইব্রেরি শেখা (৩-৪ সপ্তাহ)</h3>
+                <ul>
+                    <li><strong><i class="fas fa-calculator text-indigo-600 mr-1"></i> NumPy:</strong> Array operations, mathematical functions, linear algebra basics। ML-এর জন্য অপরিহার্য।</li>
+                    <li><strong><i class="fas fa-table text-indigo-600 mr-1"></i> Pandas:</strong> DataFrame, Series, data cleaning, groupby, merge, handling missing values। ডেটা সায়েন্সের হার্ট।</li>
+                    <li><strong><i class="fas fa-chart-bar text-indigo-600 mr-1"></i> Matplotlib/Seaborn:</strong> Plotting graphs, histograms, heatmaps, EDA (Exploratory Data Analysis)।</li>
+                </ul>
+
+                <h3>📙 স্টেপ ৩: মেশিন লার্নিং শুরু (৬-৮ সপ্তাহ)</h3>
+                <ul>
+                    <li><strong>Supervised Learning:</strong> Linear Regression, Logistic Regression, Decision Trees, Random Forest, SVM।</li>
+                    <li><strong>Unsupervised Learning:</strong> K-Means Clustering, PCA।</li>
+                    <li><strong>Model Evaluation:</strong> Train/test split, cross-validation, metrics (accuracy, precision, recall, F1-score, MSE)।</li>
+                    <li><strong>Real Projects:</strong> Titanic survival prediction, House price prediction, Iris classification, ইত্যাদি।</li>
+                </ul>
+
+                <!-- Enhanced advice block -->
+                <div class="bg-indigo-50 border-l-8 border-indigo-600 p-8 my-12 rounded-2xl shadow-md">
+                    <p class="text-2xl font-semibold text-indigo-900 mb-4 flex items-center"><i class="fas fa-lightbulb text-4xl mr-4"></i> আমার পরামর্শ:</p>
+                    <p class="text-xl text-indigo-800 leading-relaxed">
+                        "প্রথম ১ মাস শুধু প্রোগ্রামিং ও ডেটা সায়েন্স লাইব্রেরিতে সময় দিন। তারপর ধীরে ধীরে মেশিন লার্নিং শুরু করুন। তাড়াহুড়ো করবেন না। মাঝে মাঝে মনে হবে, পারছি না — কিন্তু এটাই শেখার পথ। প্রতিদিন একটু একটু করে এগিয়ে যান।"
+                    </p>
+                    <p class="text-indigo-800 font-bold mt-6 text-xl">- জুনায়েদ বীন করিম</p>
+                </div>
+
+                <h2>🔹 কেন সিক্রেট কোডারের বুটক্যাম্প?</h2>
+                <p>
+                    আমাদের ৪ মাসের মেশিন লার্নিং বুটক্যাম্প ডিজাইন করা হয়েছে একদম জিরো লেভেলের শিক্ষার্থীদের জন্য। যাদের প্রোগ্রামিং জানা নেই, তারাও যেন কনফিডেন্টলি ML শিখতে পারেন। আমরা প্র্যাকটিক্যাল প্রকল্পের মাধ্যমে শেখাই। 
+                </p>
+                <div class="grid md:grid-cols-3 gap-4 text-center my-6">
+                    <div class="bg-white p-5 rounded-xl shadow-sm border">
+                        <i class="fas fa-clock fa-3x text-indigo-500 mb-3"></i>
+                        <h4 class="font-bold">প্রথম ২ সপ্তাহ</h4>
+                        <p class="text-gray-600">Python বেসিক ও মিনি প্রকল্প</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-sm border">
+                        <i class="fas fa-tasks fa-3x text-indigo-500 mb-3"></i>
+                        <h4 class="font-bold">সাপ্তাহিক এসাইনমেন্ট</h4>
+                        <p class="text-gray-600">রিয়েল ওয়ার্ল্ড প্রবলেম</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-sm border">
+                        <i class="fas fa-user-tie fa-3x text-indigo-500 mb-3"></i>
+                        <h4 class="font-bold">পার্সোনাল মেন্টরশিপ</h4>
+                        <p class="text-gray-600">আমি নিজে (জুনায়েদ) সাপোর্ট দিই</p>
+                    </div>
+                </div>
+                <ul class="list-none pl-0">
+                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> প্রথম ২ সপ্তাহ Python বেসিক শেখানো হয়</li>
+                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> প্রতিটি ক্লাসের পরে প্র্যাকটিস প্রবলেম</li>
+                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> লাইভ কোডিং সেশন (প্রতি সপ্তাহে ৩ দিন)</li>
+                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> প্রতি সপ্তাহে এসাইনমেন্ট ও রিভিউ</li>
+                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> পার্সোনাল মেন্টরশিপ (আমি নিজে)</li>
+                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> ক্যারিয়ার গাইডলাইন ও রিজিউমি হেল্প</li>
+                </ul>
+
+                <!-- BIG CTA Section (bigger than before) -->
+                <div class="bg-gradient-to-r from-indigo-700 to-purple-700 text-white rounded-3xl p-12 text-center my-16 shadow-2xl">
+                    <h3 class="text-4xl font-bold mb-6">আপনার ML যাত্রা শুরু করুন আজই</h3>
+                    <p class="text-2xl mb-8 opacity-90">জিরো থেকে প্রো - ৪ মাসের কমপ্লিট গাইডলাইন, লাইভ ক্লাস ও মেন্টরশিপ</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="https://forms.gle/1e1hec2U2U5HJRdK9" class="bg-white text-indigo-700 font-bold py-4 px-12 rounded-full text-xl hover:bg-gray-100 transition shadow-lg transform hover:scale-105">
+                            <i class="fas fa-edit mr-2"></i>এখনই ভর্তি হোন
+                        </a>
+                        <a href="#" class="bg-transparent border-2 border-white text-white font-bold py-4 px-12 rounded-full text-xl hover:bg-white hover:text-indigo-700 transition">
+                            <i class="fas fa-video mr-2"></i>ফ্রি সেমিনার দেখুন
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <h2>কেন সিক্রেট কোডারের বুটক্যাম্প?</h2>
-            <p>
-                আমাদের ৩ মাসের মেশিন লার্নিং বুটক্যাম্প ডিজাইন করা হয়েছে একদম জিরো লেভেলের শিক্ষার্থীদের জন্য। যাদের প্রোগ্রামিং জানা নেই, তারাও যেন কনফিডেন্টলি ML শিখতে পারেন।
-            </p>
-            <ul>
-                <li>প্রথম ২ সপ্তাহ Python বেসিক শেখানো হয়</li>
-                <li>প্রতিটি ক্লাসের পরে প্র্যাকটিস প্রবলেম</li>
-                <li>লাইভ কোডিং সেশন</li>
-                <li>প্রতি সপ্তাহে এসাইনমেন্ট</li>
-                <li>পার্সোনাল মেন্টরশিপ (আমি নিজে)</li>
-            </ul>
-
-            <!-- CTA Section -->
-            <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl p-8 text-center my-12">
-                <h3 class="text-2xl font-bold mb-4">আপনার ML যাত্রা শুরু করুন আজই</h3>
-                <p class="mb-6">জিরো থেকে প্রো - ৩ মাসের কমপ্লিট গাইডলাইন</p>
-                <a href="https://forms.gle/1e1hec2U2U5HJRdK9" class="inline-block bg-white text-indigo-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition">
-                    এখনই ভর্তি হোন
-                </a>
+            <!-- Author Bio - Expanded -->
+            <div class="author-card text-white rounded-3xl p-10 mt-16 shadow-xl">
+                <div class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
+                    <div class="w-28 h-28 bg-white rounded-full flex items-center justify-center text-indigo-700 text-4xl font-bold shadow-2xl border-4 border-indigo-300">
+                        জে
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h3 class="text-3xl font-bold">জুনায়েদ বীন করিম</h3>
+                        <p class="text-indigo-200 text-xl mt-1">মেশিন লার্নিং স্পেশালিস্ট ও ইন্সট্রাক্টর, সিক্রেট কোডার</p>
+                        <p class="text-indigo-100 text-lg mt-3 max-w-2xl">
+                            ৫+ বছর অভিজ্ঞতা | ২০০+ শিক্ষার্থী (যাদের ৭০% এর প্রোগ্রামিং ব্যাকগ্রাউন্ড ছিল না) | ইন্ডাস্ট্রি প্রজেক্ট ৫০+। 
+                            আমার মেন্টরশিপে ৫০+ জন এখন ডেটা সায়েন্টিস্ট হিসেবে কাজ করছেন।
+                        </p>
+                        <div class="flex justify-center md:justify-start space-x-4 mt-4">
+                            <a href="#" class="bg-indigo-800 p-3 rounded-full hover:bg-indigo-900"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="bg-indigo-800 p-3 rounded-full hover:bg-indigo-900"><i class="fab fa-github"></i></a>
+                            <a href="#" class="bg-indigo-800 p-3 rounded-full hover:bg-indigo-900"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Author Bio -->
-        <div class="author-card text-white rounded-2xl p-8 mt-12">
-            <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
-                <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-indigo-600 text-3xl font-bold">
-                    জে
+            <!-- Comments/CTA - Bigger -->
+            <div class="text-center mt-16 bg-gray-100 p-10 rounded-3xl">
+                <p class="text-2xl text-gray-700 mb-6">এই ব্লগ সম্পর্কে আপনার মতামত জানান, কিংবা আপনার প্রশ্ন লিখুন</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://wa.me/8801893255503" class="inline-flex items-center bg-green-600 text-white font-bold py-4 px-8 rounded-full text-xl hover:bg-green-700 transition shadow-md">
+                        <i class="fab fa-whatsapp mr-3 text-2xl"></i>
+                        WhatsApp এ মতামত পাঠান
+                    </a>
+                    <a href="#" class="inline-flex items-center bg-indigo-600 text-white font-bold py-4 px-8 rounded-full text-xl hover:bg-indigo-700 transition shadow-md">
+                        <i class="fab fa-facebook-messenger mr-3 text-2xl"></i>
+                        মেসেঞ্জারে কথা বলুন
+                    </a>
+                </div>
+                <p class="text-gray-500 mt-6">সাধারণত ২-৩ ঘন্টার মধ্যে রিপ্লাই দিই।</p>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer (bigger version) -->
+    <footer class="bg-gray-900 text-white mt-20 pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-2xl font-bold mb-4 border-l-4 border-indigo-400 pl-3">সিক্রেট কোডার</h4>
+                    <p class="text-gray-400">প্রোগ্রামিং, মেশিন লার্নিং ও ডেটা সায়েন্স নিয়ে বাংলা টিউটোরিয়াল ও কোর্স।</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold">জুনায়েদ বীন করিম</h3>
-                    <p class="text-indigo-100">মেশিন লার্নিং স্পেশালিস্ট ও ইন্সট্রাক্টর</p>
-                    <p class="text-sm text-indigo-200 mt-2">
-                        ৫+ বছর অভিজ্ঞতা | ২০০+ শিক্ষার্থী | ইন্ডাস্ট্রি প্রজেক্ট ৫০+
-                    </p>
+                    <h5 class="font-bold text-lg mb-3">গুরুত্বপূর্ণ লিংক</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-indigo-300">সকল ব্লগ</a></li>
+                        <li><a href="#" class="hover:text-indigo-300">কোর্সসমূহ</a></li>
+                        <li><a href="#" class="hover:text-indigo-300">মেন্টরশিপ</a></li>
+                        <li><a href="#" class="hover:text-indigo-300">যোগাযোগ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-lg mb-3">সোশ্যাল মিডিয়া</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube fa-2x"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-github fa-2x"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="font-bold text-lg mb-3">যোগাযোগ</h5>
+                    <p class="text-gray-400"><i class="fas fa-envelope mr-2"></i> junayedbinkarim@gmail.com</p>
+                    <p class="text-gray-400"><i class="fas fa-phone mr-2"></i> +880 1893-255503</p>
                 </div>
             </div>
-        </div>
-
-        <!-- Comments/CTA -->
-        <div class="text-center mt-12">
-            <p class="text-gray-600 mb-4">এই ব্লগ সম্পর্কে আপনার মতামত জানান</p>
-            <a href="https://wa.me/8801893255503" class="inline-flex items-center bg-green-600 text-white font-bold py-3 px-6 rounded-full hover:bg-green-700 transition">
-                <i class="fab fa-whatsapp mr-3"></i>
-                WhatsApp এ মতামত পাঠান
-            </a>
-        </div>
-    </article>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white mt-20 py-8">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p>&copy; ২০২৬ সিক্রেট কোডার। জুনায়েদ বীন করিম</p>
+            <hr class="border-gray-800 my-6">
+            <p class="text-center text-gray-500 text-lg">&copy; ২০২৬ সিক্রেট কোডার। জুনায়েদ বীন করিম। সমস্ত অধিকার সংরক্ষিত।</p>
         </div>
     </footer>
 </body>
