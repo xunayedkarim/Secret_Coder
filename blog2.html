@@ -3,187 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>২০২৬ সালে মেশিন লার্নিং ইঞ্জিনিয়ারদের চাহিদা | জুনায়েদ বীন করিম</title>
-    <meta name="description" content="২০২৬ সালে বাংলাদেশ ও গ্লোবাল মার্কেটে ML ইঞ্জিনিয়ারদের চাহিদা, বেতন এবং ক্যারিয়ার সম্ভাবনা। জুনায়েদ বীন করিমের বিশ্লেষণ।">
+    <title>২০২৬ ML ইঞ্জিনিয়ার চাহিদা – বড় সংস্করণ | জুনায়েদ বীন করিম</title>
+    <meta name="description" content="বাংলাদেশ ও গ্লোবাল মার্কেটে ML ইঞ্জিনিয়ারদের চাহিদা, বেতন, ক্যারিয়ার সম্ভাবনা। জুনায়েদ বীন করিমের বিস্তারিত বিশ্লেষণ।">
     
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS (extended) + Font Awesome -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Bangla Font -->
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        body { font-family: 'Hind Siliguri', sans-serif; }
-        .prose { max-width: 65ch; margin: 0 auto; }
-        .prose p { margin-bottom: 1.5rem; line-height: 1.8; color: #374151; }
-        .prose h2 { font-size: 1.8rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #111827; }
-        .stats-card { background: linear-gradient(145deg, #ffffff 0%, #f3f4f6 100%); }
+        body { font-family: 'Hind Siliguri', sans-serif; background: #fafafa; }
+        /* Enhanced prose for large version */
+        .prose-lg-custom { max-width: 78ch; margin: 0 auto; }
+        .prose-lg-custom p { margin-bottom: 2rem; line-height: 1.9; font-size: 1.2rem; color: #1f2937; }
+        .prose-lg-custom h2 { font-size: 2.2rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1.5rem; color: #111827; border-left: 8px solid #6366f1; padding-left: 1.5rem; }
+        .prose-lg-custom h3 { font-size: 1.8rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: #1e3a8a; }
+        .prose-lg-custom ul, .prose-lg-custom ol { margin-bottom: 2rem; font-size: 1.2rem; }
+        .prose-lg-custom li { margin-bottom: 0.75rem; }
+        .stats-card { background: linear-gradient(145deg, #ffffff 0%, #f3f4f6 100%); border-radius: 1.5rem; transition: all 0.2s ease; border: 1px solid rgba(255,255,255,0.6); }
+        .stats-card:hover { transform: translateY(-4px); box-shadow: 0 20px 30px -10px rgba(0,0,0,0.15); }
+        .big-number { font-size: 2.8rem; line-height: 1; }
+        .author-badge { background: rgba(255,255,255,0.15); backdrop-filter: blur(4px); }
+        .feature-glow { box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.3); }
+        @media (max-width: 640px) {
+            .prose-lg-custom h2 { font-size: 1.8rem; }
+            .big-number { font-size: 2rem; }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
 
-    <!-- Navbar -->
-    <div class="w-full text-gray-700 bg-white shadow-sm">
-        <div class="max-w-screen-xl px-8 mx-auto flex items-center justify-between py-4">
-            <a href="index.html" class="text-lg font-bold tracking-widest text-gray-900">সিক্রেট কোডার</a>
-            <a href="index.html" class="text-indigo-600 hover:text-indigo-800">← হোম পেজ</a>
+    <!-- Navigation (bigger) -->
+    <div class="w-full text-gray-800 bg-white border-b border-gray-200 shadow-sm">
+        <div class="max-w-screen-xl px-6 md:px-10 mx-auto flex items-center justify-between py-5">
+            <a href="index.html" class="text-2xl font-bold tracking-wider text-indigo-700"><i class="fas fa-code mr-2"></i>সিক্রেট কোডার</a>
+            <a href="index.html" class="text-indigo-600 hover:text-indigo-900 font-medium text-lg transition">
+                <i class="fas fa-arrow-left mr-1"></i> হোম পেজ
+            </a>
         </div>
     </div>
 
-    <!-- Blog Content -->
-    <article class="max-w-4xl mx-auto px-4 py-12">
+    <!-- Main Blog Content: Large Version -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         
-        <!-- Blog Header -->
-        <header class="text-center mb-12">
-            <div class="text-green-600 text-sm font-bold mb-4">ক্যারিয়ার গাইড</div>
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                ২০২৬ সালে মেশিন লার্নিং ইঞ্জিনিয়ারদের চাহিদা কেমন?
+        <!-- Header section with large typography -->
+        <div class="text-center mb-16">
+            <span class="inline-block bg-green-100 text-green-700 font-bold px-5 py-2 rounded-full text-base mb-6">🔍 ক্যারিয়ার গাইড ২০২৬ – বড় সংস্করণ</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 mb-8 leading-tight tracking-tight">
+                ২০২৬ সালে <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-700 to-purple-700">মেশিন লার্নিং ইঞ্জিনিয়ার</span><br>চাহিদা কেমন?
             </h1>
             
-            <!-- Author Info -->
-            <div class="flex items-center justify-center space-x-4 mb-8">
-                <div class="w-16 h-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                    জে
+            <!-- Author Info (large) -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 bg-white p-6 rounded-3xl shadow-sm max-w-2xl mx-auto border border-gray-100">
+                <div class="flex items-center gap-4">
+                    <div class="w-20 h-20 bg-gradient-to-br from-indigo-700 to-purple-700 rounded-full flex items-center justify-center text-white text-3xl font-bold shadow-lg">জে</div>
+                    <div class="text-left">
+                        <p class="font-black text-2xl text-gray-900">জুনায়েদ বীন করিম</p>
+                        <p class="text-gray-500 text-lg">ML স্পেশালিস্ট ও ক্যারিয়ার কনসালট্যান্ট</p>
+                    </div>
                 </div>
-                <div class="text-left">
-                    <p class="font-bold text-gray-900">জুনায়েদ বীন করিম</p>
-                    <p class="text-gray-500 text-sm">ML স্পেশালিস্ট ও ক্যারিয়ার কনসালট্যান্ট</p>
-                    <p class="text-gray-400 text-xs">প্রকাশিত: ফেব্রুয়ারি ২৮, ২০২৬ • ৬ মিনিট পড়া</p>
+                <div class="border-l pl-6 border-gray-200 hidden sm:block h-12"></div>
+                <div class="text-left sm:text-left">
+                    <p class="text-gray-600 text-lg"><i class="far fa-calendar-alt mr-2 text-indigo-500"></i> ফেব্রুয়ারি ২৮, ২০২৬</p>
+                    <p class="text-gray-600 text-lg"><i class="far fa-clock mr-2 text-indigo-500"></i> ৮ মিনিট পড়া (বিশ্লেষণ)</p>
                 </div>
-            </div>
-        </header>
-
-        <!-- Stats Overview -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-            <div class="stats-card p-4 rounded-xl text-center shadow-sm">
-                <div class="text-2xl font-bold text-indigo-600">২৮০%</div>
-                <p class="text-xs text-gray-600">চাহিদা বৃদ্ধি (২০২৫)</p>
-            </div>
-            <div class="stats-card p-4 rounded-xl text-center shadow-sm">
-                <div class="text-2xl font-bold text-green-600">$১৫০কে+</div>
-                <p class="text-xs text-gray-600">গড় বেতন (USA)</p>
-            </div>
-            <div class="stats-card p-4 rounded-xl text-center shadow-sm">
-                <div class="text-2xl font-bold text-purple-600">৮০%</div>
-                <p class="text-xs text-gray-600">রিমোট জব সুযোগ</p>
-            </div>
-            <div class="stats-card p-4 rounded-xl text-center shadow-sm">
-                <div class="text-2xl font-bold text-blue-600">১০০০+</div>
-                <p class="text-xs text-gray-600">জব ওপেনিং (বাংলাদেশ)</p>
             </div>
         </div>
 
-        <!-- Blog Body -->
-        <div class="prose text-lg">
-            <p class="text-xl text-gray-700 font-medium mb-8">
-                ২০২৬ সালে এসে মেশিন লার্নিং ইঞ্জিনিয়ারদের চাহিদা আগের যেকোনো সময়ের চেয়ে বেড়েছে। আজকের ব্লগে আমি শেয়ার করব বাংলাদেশ ও গ্লোবাল মার্কেটের রিয়েল ডেটা এবং ক্যারিয়ার সম্ভাবনা।
+        <!-- Hero Stats Grid: bigger numbers and cards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-5 lg:gap-8 mb-16">
+            <div class="stats-card p-6 lg:p-8 rounded-3xl text-center shadow-md">
+                <div class="big-number font-black text-indigo-600 mb-2">২৮০%</div>
+                <p class="text-base lg:text-lg font-medium text-gray-700">চাহিদা বৃদ্ধি (গ্লোবাল)</p>
+                <span class="text-sm text-indigo-500">LinkedIn ২০২৫</span>
+            </div>
+            <div class="stats-card p-6 lg:p-8 rounded-3xl text-center shadow-md">
+                <div class="big-number font-black text-green-600 mb-2">$১৫০কে+</div>
+                <p class="text-base lg:text-lg font-medium text-gray-700">গড় বেতন (USA)</p>
+                <span class="text-sm text-green-500">সিনিয়র লেভেল</span>
+            </div>
+            <div class="stats-card p-6 lg:p-8 rounded-3xl text-center shadow-md">
+                <div class="big-number font-black text-purple-600 mb-2">৮০%</div>
+                <p class="text-base lg:text-lg font-medium text-gray-700">রিমোট জব সুযোগ</p>
+                <span class="text-sm text-purple-500">আন্তর্জাতিক</span>
+            </div>
+            <div class="stats-card p-6 lg:p-8 rounded-3xl text-center shadow-md">
+                <div class="big-number font-black text-blue-600 mb-2">১০০০+</div>
+                <p class="text-base lg:text-lg font-medium text-gray-700">জব ওপেনিং (বাংলাদেশ)</p>
+                <span class="text-sm text-blue-500">ফেব্রুয়ারি ২০২৬</span>
+            </div>
+        </div>
+
+        <!-- Blog Body with large text and visual spacing -->
+        <div class="prose-lg-custom mx-auto">
+            <p class="text-2xl text-gray-800 font-medium leading-relaxed mb-12 border-b pb-6">
+                <i class="fas fa-quote-left text-indigo-300 mr-2"></i> ২০২৬ সালে এসে মেশিন লার্নিং ইঞ্জিনিয়ারদের চাহিদা আগের যেকোনো সময়ের চেয়ে বেড়েছে। 
+                এই বড় সংস্করণে আমি শেয়ার করছি বাংলাদেশ ও গ্লোবাল মার্কেটের রিয়েল ডেটা, ক্যারিয়ার সম্ভাবনা এবং ইনসাইটস।
             </p>
 
-            <h2>📊 গ্লোবাল মার্কেটে ML ইঞ্জিনিয়ারদের চাহিদা</h2>
+            <!-- Section with extra visual -->
+            <h2>📊 <span class="underline decoration-indigo-300">গ্লোবাল মার্কেটে ML ইঞ্জিনিয়ারদের চাহিদা</span></h2>
             <p>
-                LinkedIn-এর ২০২৫ সালের রিপোর্ট অনুযায়ী, মেশিন লার্নিং ইঞ্জিনিয়ারিং ছিল দ্বিতীয় fastest-growing job role। ২০২৬ সালে এই ট্রেন্ড আরও বেড়েছে:
+                LinkedIn-এর ২০২৫ সালের রিপোর্ট অনুযায়ী, মেশিন লার্নিং ইঞ্জিনিয়ারিং ছিল দ্বিতীয় fastest-growing job role। 
+                ২০২৬ সালে এই ট্রেন্ড আরও বেড়েছে, বিশেষ করে জেনারেটিভ AI এবং অটোমেশন প্রকল্পের কারণে। নিচের ডেটা দেখুন:
             </p>
-            <ul>
-                <li><strong>USA:</strong> ২৮০% চাহিদা বৃদ্ধি (২০২০-২০২৫)</li>
-                <li><strong>EU:</strong> ২০০% বৃদ্ধি</li>
-                <li><strong>সিঙ্গাপুর:</strong> ৩৫০% বৃদ্ধি (এশিয়ার হাব)</li>
-                <li><strong>মধ্যপ্রাচ্য:</strong> নতুন ML সেন্টার খুলছে</li>
-            </ul>
-
-            <h2>🇧🇩 বাংলাদেশের বর্তমান অবস্থা</h2>
-            <p>
-                বাংলাদেশেও এখন ML ইঞ্জিনিয়ারদের চাহিদা দ্রুত বাড়ছে:
-            </p>
-            <ul>
-                <li>৫০+ কোম্পানি ML টিম তৈরি করছে</li>
-                <li>ফ্রিল্যান্সিং প্ল্যাটফর্মে ML কাজের পরিমাণ বেড়েছে ২০০%</li>
-                <li>স্টার্টআপগুলো AI-based সলিউশন নিচ্ছে</li>
-                <li>মাল্টিন্যাশনাল কোম্পানিগুলো বাংলাদেশে R&D সেন্টার খুলছে</li>
-            </ul>
-
-            <h2>💰 বেতন কাঠামো (২০২৬)</h2>
-            
-            <h3>বাংলাদেশে ML ইঞ্জিনিয়ারদের বেতন</h3>
-            <ul>
-                <li><strong>জুনিয়র (০-২ বছর):</strong> ৪০-৭০k BDT/মাস</li>
-                <li><strong>মিড-লেভেল (২-৪ বছর):</strong> ৮০-১৪০k BDT/মাস</li>
-                <li><strong>সিনিয়র (৫+ বছর):</strong> ১৫০-২৫০k+ BDT/মাস</li>
-                <li><strong>ফ্রিল্যান্স:</strong> $২০-$১০০/ঘন্টা</li>
-            </ul>
-
-            <h3>রিমোট জব (বিদেশি কোম্পানি)</h3>
-            <ul>
-                <li><strong>USA কোম্পানি:</strong> $৬০-১২০k/বছর</li>
-                <li><strong>EU কোম্পানি:</strong> €৪০-৮০k/বছর</li>
-                <li><strong>সিঙ্গাপুর:</strong> S$৬০-১২০k/বছর</li>
-            </ul>
-
-            <h2>🎯 কোন কোন ইন্ডাস্ট্রিতে চাহিদা সবচেয়ে বেশি?</h2>
-            <ul>
-                <li><strong>ফাইন্যান্স:</strong> ফ্রড ডিটেকশন, অটোমেটেড ট্রেডিং</li>
-                <li><strong>হেলথকেয়ার:</strong> মেডিকেল ইমেজিং, ডিজিজ ডায়াগনোসিস</li>
-                <li><strong>ই-কমার্স:</strong> রিকমেন্ডেশন সিস্টেম</li>
-                <li><strong>টেলিকম:</strong> কাস্টমার চার্ন প্রেডিকশন</li>
-                <li><strong>ম্যানুফ্যাকচারিং:</strong> কোয়ালিটি কন্ট্রোল</li>
-            </ul>
-
-            <div class="bg-indigo-50 border-l-4 border-indigo-600 p-6 my-8 rounded">
-                <p class="text-lg font-semibold text-indigo-900 mb-2">📌 জুনায়েদ বীন করিমের বিশ্লেষণ:</p>
-                <p class="text-indigo-800">
-                    "২০২৬ সালে ML ইঞ্জিনিয়ারদের চাহিদা শুধু বাড়বেই, কমবে না। কিন্তু শুধু 'ML জানি' বললে হবে না। দরকার রিয়েল প্রজেক্ট, ইন্ডাস্ট্রি এক্সপেরিয়েন্স এবং প্রবলেম সলভিং স্কিল।"
-                </p>
+            <div class="grid md:grid-cols-2 gap-6 my-8">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-indigo-100 flex items-start gap-4">
+                    <i class="fas fa-chart-line text-indigo-600 text-3xl"></i>
+                    <div><span class="font-bold text-2xl">USA</span> <span class="block text-gray-700">২৮০% চাহিদা বৃদ্ধি (২০২০-২৫)</span></div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-indigo-100 flex items-start gap-4">
+                    <i class="fas fa-chart-line text-indigo-600 text-3xl"></i>
+                    <div><span class="font-bold text-2xl">EU</span> <span class="block text-gray-700">২০০% বৃদ্ধি</span></div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-indigo-100 flex items-start gap-4">
+                    <i class="fas fa-chart-line text-indigo-600 text-3xl"></i>
+                    <div><span class="font-bold text-2xl">সিঙ্গাপুর</span> <span class="block text-gray-700">৩৫০% বৃদ্ধি (এশিয়ার হাব)</span></div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-indigo-100 flex items-start gap-4">
+                    <i class="fas fa-chart-line text-indigo-600 text-3xl"></i>
+                    <div><span class="font-bold text-2xl">মধ্যপ্রাচ্য</span> <span class="block text-gray-700">নতুন ML সেন্টার খুলছে</span></div>
+                </div>
             </div>
 
-            <h2>🚀 কীভাবে প্রস্তুত হবেন?</h2>
-            <ol>
-                <li><strong>Python ও ডেটা সায়েন্সে শক্ত ভিত</strong> (Pandas, NumPy)</li>
-                <li><strong>মেশিন লার্নিং অ্যালগরিদম</strong> (থিওরি + প্র্যাকটিস)</li>
-                <li><strong>৫+ রিয়েল প্রজেক্ট</strong> (পোর্টফোলিওর জন্য)</li>
-                <li><strong>Kaggle competitions</strong> (এক্সপেরিয়েন্সের জন্য)</li>
-                <li><strong>নেটওয়ার্কিং</strong> (LinkedIn, ML কমিউনিটি)</li>
+            <h2>🇧🇩 বাংলাদেশের বর্তমান অবস্থা (বড় চিত্র)</h2>
+            <p>
+                বাংলাদেশেও এখন ML ইঞ্জিনিয়ারদের চাহিদা দ্রুত বাড়ছে। আইটি সেক্টরে AI সলিউশন ও রিমোট জবের কারণে এটি সম্ভব হয়েছে:
+            </p>
+            <ul class="list-disc pl-8 space-y-3">
+                <li><strong>৫০+ কোম্পানি</strong> ML টিম তৈরি করছে (বড় এন্টারপ্রাইজ + স্টার্টআপ)</li>
+                <li><strong>ফ্রিল্যান্সিং প্ল্যাটফর্মে</strong> ML কাজের পরিমাণ বেড়েছে ২০০% (আপওয়ার্ক, ফাইভার)</li>
+                <li><strong>স্টার্টআপগুলো</strong> AI-based সলিউশন নিচ্ছে (নাগরিক, শপথ, বিকাশ ইত্যাদি)</li>
+                <li><strong>মাল্টিন্যাশনাল কোম্পানি</strong> বাংলাদেশে R&D সেন্টার খুলছে (স্যামসাং, গুগল)</li>
+            </ul>
+
+            <h2>💰 বেতন কাঠামো (বিস্তারিত ২০২৬)</h2>
+            
+            <h3>🇧🇩 বাংলাদেশে ML ইঞ্জিনিয়ারদের বেতন</h3>
+            <div class="overflow-x-auto bg-white p-4 rounded-xl shadow-sm my-6">
+                <table class="min-w-full text-lg">
+                    <thead><tr class="border-b-2"><th class="text-left py-2">লেভেল</th><th class="text-left py-2">মাসিক বেতন (BDT)</th><th class="text-left py-2">রিমোট সম্ভাবনা</th></tr></thead>
+                    <tbody>
+                        <tr><td class="py-2">জুনিয়র (০-২ বছর)</td><td class="font-bold">৪০-৭০k</td><td>$২০-৩০/ঘন্টা</td></tr>
+                        <tr><td class="py-2">মিড-লেভেল (২-৪ বছর)</td><td class="font-bold">৮০-১৪০k</td><td>$৩০-৫০/ঘন্টা</td></tr>
+                        <tr><td class="py-2">সিনিয়র (৫+ বছর)</td><td class="font-bold">১৫০-২৫০k+</td><td>$৫০-১০০/ঘন্টা</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>🌍 রিমোট জব (বিদেশি কোম্পানি)</h3>
+            <ul class="list-disc pl-8">
+                <li><strong>USA কোম্পানি:</strong> $৬০-১২০k/বছর (এন্ট্রি-মিড)</li>
+                <li><strong>EU কোম্পানি:</strong> €৪০-৮০k/বছর + বেনিফিট</li>
+                <li><strong>সিঙ্গাপুর/ UAE:</strong> S$৬০-১২০k/বছর (ট্যাক্স কম)</li>
+            </ul>
+
+            <h2>🏭 কোন কোন ইন্ডাস্ট্রিতে চাহিদা সবচেয়ে বেশি?</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-3 my-6">
+                <span class="bg-indigo-50 px-4 py-3 rounded-full text-indigo-800 font-medium flex items-center gap-2"><i class="fas fa-university"></i> ফাইন্যান্স</span>
+                <span class="bg-green-50 px-4 py-3 rounded-full text-green-800 font-medium flex items-center gap-2"><i class="fas fa-heartbeat"></i> হেলথকেয়ার</span>
+                <span class="bg-purple-50 px-4 py-3 rounded-full text-purple-800 font-medium flex items-center gap-2"><i class="fas fa-shopping-cart"></i> ই-কমার্স</span>
+                <span class="bg-blue-50 px-4 py-3 rounded-full text-blue-800 font-medium flex items-center gap-2"><i class="fas fa-broadcast-tower"></i> টেলিকম</span>
+                <span class="bg-yellow-50 px-4 py-3 rounded-full text-yellow-800 font-medium flex items-center gap-2"><i class="fas fa-industry"></i> ম্যানুফ্যাকচারিং</span>
+                <span class="bg-red-50 px-4 py-3 rounded-full text-red-800 font-medium flex items-center gap-2"><i class="fas fa-robot"></i> রোবোটিক্স</span>
+            </div>
+            <ul class="list-disc pl-8">
+                <li><strong>ফাইন্যান্স:</strong> ফ্রড ডিটেকশন, অটোমেটেড ট্রেডিং, ক্রেডিট স্কোরিং</li>
+                <li><strong>হেলথকেয়ার:</strong> মেডিকেল ইমেজিং, ডিজিজ ডায়াগনোসিস, ড্রাগ ডিসকভারি</li>
+                <li><strong>ই-কমার্স:</strong> রিকমেন্ডেশন সিস্টেম, ডায়নামিক প্রাইসিং</li>
+                <li><strong>টেলিকম:</strong> কাস্টমার চার্ন প্রেডিকশন, নেটওয়ার্ক অপ্টিমাইজেশন</li>
+                <li><strong>ম্যানুফ্যাকচারিং:</strong> কোয়ালিটি কন্ট্রোল (Computer Vision), predictive maintenance</li>
+            </ul>
+
+            <!-- Enhanced Analyst Block -->
+            <div class="bg-gradient-to-r from-indigo-800 to-indigo-900 text-white p-8 lg:p-10 rounded-3xl my-12 shadow-xl feature-glow">
+                <div class="flex items-start gap-5 flex-col md:flex-row">
+                    <div class="bg-white/20 rounded-full p-4 text-white text-5xl">📈</div>
+                    <div>
+                        <p class="text-3xl font-black mb-3">জুনায়েদ বীন করিমের বিশ্লেষণ</p>
+                        <p class="text-xl leading-relaxed text-indigo-100">
+                            "২০২৬ সালে ML ইঞ্জিনিয়ারদের চাহিদা শুধু বাড়বেই, কমবে না। কিন্তু শুধু 'ML জানি' বললে হবে না। 
+                            দরকার রিয়েল প্রজেক্ট, ইন্ডাস্ট্রি এক্সপেরিয়েন্স এবং প্রবলেম সলভিং স্কিল। যে প্রোডাকশন-রেডি মডেল বানাতে পারবে, তার জন্য সুযোগ সীমাহীন।"
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>🧠 কীভাবে প্রস্তুত হবেন? (বড় পরিকল্পনা)</h2>
+            <ol class="list-decimal pl-8 space-y-4 text-xl">
+                <li><strong>Python ও ডেটা সায়েন্সে শক্ত ভিত</strong> – Pandas, NumPy, SQL, এবং ডেটা ভিজুয়ালাইজেশন</li>
+                <li><strong>মেশিন লার্নিং অ্যালগরিদম</strong> – থিওরি + প্র্যাকটিস: scikit-learn, XGBoost, PyTorch/TensorFlow</li>
+                <li><strong>৫+ রিয়েল প্রজেক্ট</strong> – পোর্টফোলিওর জন্য (এন্ড-টু-এন্ড ডিপ্লয়মেন্ট)</li>
+                <li><strong>Kaggle competitions</strong> – এক্সপেরিয়েন্স ও কমিউনিটির জন্য</li>
+                <li><strong>নেটওয়ার্কিং</strong> – LinkedIn, ML কমিউনিটি, কনফারেন্স</li>
             </ol>
 
-            <!-- CTA Section -->
-            <div class="bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-2xl p-8 text-center my-12">
-                <h3 class="text-2xl font-bold mb-4">আপনার ML ক্যারিয়ার শুরু করুন আজ</h3>
-                <p class="mb-6">৩ মাসের বুটক্যাম্প যা আপনাকে জব-রেডি করবে</p>
-                <a href="https://forms.gle/1e1hec2U2U5HJRdK9" class="inline-block bg-white text-green-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition">
-                    এখনই ভর্তি হোন
+            <!-- CTA (big) -->
+            <div class="bg-gradient-to-br from-green-600 to-emerald-700 text-white rounded-4xl p-10 lg:p-14 text-center my-16 shadow-2xl">
+                <i class="fas fa-rocket text-6xl mb-6 text-white/80"></i>
+                <h3 class="text-4xl lg:text-5xl font-black mb-4">আপনার ML ক্যারিয়ার শুরু করুন আজ</h3>
+                <p class="text-2xl mb-8 text-green-100">৩ মাসের বুটক্যাম্প যা আপনাকে জব-রেডি করবে — গাইডলাইন ও মেন্টরশিপ সহ</p>
+                <a href="https://forms.gle/1e1hec2U2U5HJRdK9" class="inline-block bg-white text-green-700 font-bold py-5 px-14 rounded-full text-2xl hover:bg-gray-100 transition shadow-xl transform hover:scale-105">
+                    <i class="fas fa-edit mr-2"></i>এখনই ভর্তি হোন (সীমিত আসন)
                 </a>
             </div>
         </div>
 
-        <!-- Author Bio -->
-        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl p-8 mt-12">
-            <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
-                <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-indigo-600 text-3xl font-bold">
-                    জে
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold">জুনায়েদ বীন করিম</h3>
-                    <p class="text-indigo-100">মেশিন লার্নিং স্পেশালিস্ট</p>
-                    <p class="text-sm text-indigo-200 mt-2">
-                        ৫+ বছর ইন্ডাস্ট্রি অভিজ্ঞতা | ২০০+ শিক্ষার্থীকে ক্যারিয়ার গড়তে সাহায্য করেছেন
+        <!-- Author Bio Big Card -->
+        <div class="bg-gradient-to-r from-indigo-800 to-purple-800 text-white rounded-4xl p-10 mt-16 shadow-2xl">
+            <div class="flex flex-col lg:flex-row items-center gap-10">
+                <div class="w-32 h-32 bg-white/30 rounded-full flex items-center justify-center text-6xl font-black text-white border-4 border-white">জে</div>
+                <div class="text-center lg:text-left">
+                    <h3 class="text-3xl font-black">জুনায়েদ বীন করিম</h3>
+                    <p class="text-xl text-indigo-200 mb-2">মেশিন লার্নিং স্পেশালিস্ট ও ক্যারিয়ার মেন্টর</p>
+                    <p class="text-lg text-indigo-100 max-w-2xl">
+                        ৫+ বছর ইন্ডাস্ট্রি অভিজ্ঞতা (USA, BD), ২০০+ শিক্ষার্থীকে ক্যারিয়ার গড়তে সাহায্য করেছেন। 
+                        বর্তমানে সিক্রেট কোডারের প্রধান উপদেষ্টা।
                     </p>
+                    <div class="flex gap-4 mt-4 justify-center lg:justify-start">
+                        <span class="bg-white/20 px-4 py-2 rounded-full text-sm"><i class="fab fa-linkedin mr-1"></i> জুনায়েদ.করিম</span>
+                        <span class="bg-white/20 px-4 py-2 rounded-full text-sm"><i class="fas fa-envelope mr-1"></i> junayed@secretcoder.ai</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Career Consultation CTA -->
-        <div class="text-center mt-12">
-            <p class="text-gray-600 mb-4">ফ্রি ক্যারিয়ার কনসালটেশন চান?</p>
-            <a href="https://wa.me/8801893255503" class="inline-flex items-center bg-green-600 text-white font-bold py-3 px-8 rounded-full hover:bg-green-700 transition">
-                <i class="fab fa-whatsapp mr-3 text-xl"></i>
-                WhatsApp এ কথা বলুন
+        <!-- Career Consultation (big button) -->
+        <div class="flex flex-col items-center mt-16 bg-gray-100 p-10 rounded-4xl border border-gray-200">
+            <p class="text-3xl font-bold text-gray-800 mb-3">ফ্রি ক্যারিয়ার কনসালটেশন চান?</p>
+            <p class="text-xl text-gray-600 mb-6">সরাসরি কথা বলুন জুনায়েদ বীন করিমের সাথে</p>
+            <a href="https://wa.me/8801893255503" class="inline-flex items-center bg-green-600 text-white font-bold py-5 px-14 rounded-full text-2xl hover:bg-green-700 transition shadow-lg gap-4">
+                <i class="fab fa-whatsapp text-4xl"></i>
+                WhatsApp এ মেসেজ দিন
             </a>
         </div>
-    </article>
+    </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white mt-20 py-8">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p>&copy; ২০২৬ সিক্রেট কোডার। জুনায়েদ বীন করিম</p>
+    <!-- Footer Large -->
+    <footer class="bg-gray-900 text-white mt-24 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-2xl font-light mb-2">সিক্রেট কোডার</p>
+            <p class="text-gray-400 text-lg">&copy; ২০২৬ – জুনায়েদ বীন করিম। সব অধিকার সংরক্ষিত।</p>
+            <p class="text-gray-500 text-base mt-4">বড় সংস্করণ | ডেটা আপডেট: ফেব্রুয়ারি ২০২৬</p>
         </div>
     </footer>
 </body>
